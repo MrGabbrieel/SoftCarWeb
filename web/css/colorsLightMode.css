@@ -1,0 +1,16 @@
+*{
+    background-color:#ffffff;
+}
+label[for="bt-menu"]{
+    color: #145899;
+}
+.itens-menu a{
+    background-color: #ffffff;
+    color: #145899;
+}
+.itens-menu ul li p{
+    background-color: #ffffff;
+}
+.titulo{
+    color: #145899;
+}

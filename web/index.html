@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Softcar Web</title>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="css/home.css"/>
+            <link rel="stylesheet" href="css/colorsLightMode.css"/>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700|Roboto+Slab:400,700&display=swap"/>            
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            
+            <script>
+            $("#fotos > div:gt(0)").hide();
+
+            setInterval(function() { 
+            $('#fotos > div:first')
+                .fadeOut(1000)
+                .next()
+                .fadeIn(1000)
+                .end()
+                .appendTo('#fotos');
+            },  5000);
+            </script>
+            
+    </head>
+    <body>
+        <div class="menu">
+            <div>
+                <input type="checkbox" id="bt-menu">
+                <label for="bt-menu">&#9776;</label>
+            </div>
+            <div class="espaço-logo">
+                <a  href="index.html"><img id="logo" src="images/logo.png"></a>
+            </div>
+
+            <div class="itens-menu">
+                <ul class="espaço-itens">
+                    <li><a href="download.html">Download Mobile</a></li> 
+                    <li><a href="#">Fale Conosco</a></li>
+                    <li><a href="#">Minha Conta</a></li>
+                </ul>
+
+                <ul class="espaço-cadastro">
+                    <li><a href="login.html">Entrar</a></li> 
+                    <li><a href="cadastro.html">Cadastrar</a></li>
+                </ul>
+            </div>
+            
+        </div>
+
+        <div class="menu-responsivo">
+
+            <div class="itens-menu-responsivo">
+                <ul class="espaço-itens-responsivo">
+                    <li><a href="download.html">Download Mobile</a></li> 
+                    <li><a href="#">Fale Conosco</a></li>
+                    <li><a href="#">Minha Conta</a></li>
+                </ul>
+
+                <ul class="espaço-cadastro-responsivo">
+                    <li><a href="login.html">Entrar</a><a href="cadastro.html">Cadastrar</a></li>
+                </ul>
+            </div>
+            
+        </div>
+
+            <div class="banner">
+                <div id="fotos">
+                    <div><img src="images/banner1.png" width="100%"></div>
+                    <div><img src="images/banner2.png" width="100%"></div>
+                    <div><img src="images/banner4.png" width="100%"></div>
+                </div>
+            </div>
+
+            <div class="texto1">
+                <p id="titulo1">Nunca foi tão facil chegar ao trabalho!</p>
+                <p id="descriçao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo enim sem, a aliquam arcu auctor in. Nulla facilisi. Suspendisse imperdiet diam non aliquet pellentesque. Donec nec luctus enim. Nullam ultricies mi quis lectus varius, in tincidunt leo tincidunt. Phasellus tincidunt rutrum egestas. Morbi et risus arcu. Pellentesque rhoncus neque ligula, varius tincidunt lorem placerat a. Vivamus sed ex ipsum. Duis justo diam, convallis sed libero a, vehicula semper tellus. Nam vel leo diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec lectus enim. Pellentesque vel sapien sagittis, facilisis ipsum at, tempus urna. Sed metus justo, venenatis in metus vitae, gravida maximus felis. Cras condimentum sapien vitae sagittis vulputate.</p>
+            </div>  
+                        
+                <div class="tabelas">
+                            <table class="tabela1">
+                                <tr class="titulo">
+                                        <th>Como surgiu?</th>
+                                </tr>
+                                    <tr>
+                                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo enim sem</td>
+                                </tr>
+                                
+                        </table>
+                        <table class="tabela2">
+                                <tr class="titulo">
+                                        <th>O Que é?</th> 
+                                </tr>
+                                    <tr>
+                                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo enim sem</td>
+                                    </tr>
+                                    
+                        </table>
+                        <table class="tabela3">
+                                <tr class="titulo">
+                                        <th>Quem somos?</th>
+                                </tr>
+                                    <tr>
+                                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo enim sem</td>
+                                    </tr>    
+                                
+                        </table>
+                    </div>
+        
+      
+
+    </body>
+</html>

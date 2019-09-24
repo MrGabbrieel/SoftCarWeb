@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.imgs{
+    margin-left: 190px;
+}
+#qrcode{
+    width: 300px;
+}
+#bannerSide{
+    margin-top: -500px;
+    display: block;
+    position: relative;
+    height: 557px;
+    float: right;
+}
+.texto1{
+    padding-top: 120px;
+    margin-left: 30px;
+}
+#titulo2{
+    font-family:'Roboto Slab',sans-serif;
+    font-size: 36pt;
+    font-weight: bold;
+    padding-left: 15px;
+}
+#descriçao1{
+    font-family: 'Open Sans',sans-serif;
+    font-size: 17pt;
+}
+@media(max-width: 800px){
+    #titulo2{
+        font-size: 24pt;
+        margin-left: 0;
+    }
+    #descriçao1{
+        font-size: 11pt;
+    }
+    .imgs{
+        margin-left: 30%;
+    }
+    #qrcode{
+        width: 200px;
+        margin-bottom: 35px;
+    }
+    #bannerSide{
+        margin-top: 0;
+        width: 100%;
+        height: auto;
+    }
+}
