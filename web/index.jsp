@@ -1,9 +1,16 @@
+<%-- 
+    Document   : index
+    Created on : 24/09/2019, 16:11:30
+    Author     : Aluno
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Softcar Web</title>
-            <meta charset="utf-8">
-            <link rel="stylesheet" href="css/home.css"/>
+         <title>Softcar Web</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/home.css"/>
             <link rel="stylesheet" href="css/colorsLightMode.css"/>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700|Roboto+Slab:400,700&display=swap"/>            
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -29,19 +36,19 @@
                 <label for="bt-menu">&#9776;</label>
             </div>
             <div class="espaço-logo">
-                <a  href="index.html"><img id="logo" src="images/logo.png"></a>
+                <a  href="index.jsp"><img id="logo" src="images/logo.png"></a>
             </div>
 
             <div class="itens-menu">
                 <ul class="espaço-itens">
-                    <li><a href="download.html">Download Mobile</a></li> 
+                    <li><a href="download.jsp">Download Mobile</a></li> 
                     <li><a href="#">Fale Conosco</a></li>
                     <li><a href="#">Minha Conta</a></li>
                 </ul>
 
                 <ul class="espaço-cadastro">
-                    <li><a href="login.html">Entrar</a></li> 
-                    <li><a href="cadastro.html">Cadastrar</a></li>
+                    <li><a href="login.jsp">Entrar</a></li> 
+                    <li><a href="cadastro.jsp">Cadastrar</a></li>
                 </ul>
             </div>
             
@@ -51,13 +58,13 @@
 
             <div class="itens-menu-responsivo">
                 <ul class="espaço-itens-responsivo">
-                    <li><a href="download.html">Download Mobile</a></li> 
+                    <li><a href="download.jsp">Download Mobile</a></li> 
                     <li><a href="#">Fale Conosco</a></li>
                     <li><a href="#">Minha Conta</a></li>
                 </ul>
 
                 <ul class="espaço-cadastro-responsivo">
-                    <li><a href="login.html">Entrar</a><a href="cadastro.html">Cadastrar</a></li>
+                    <li><a href="login.jsp">Entrar</a><a href="cadastro.jsp">Cadastrar</a></li>
                 </ul>
             </div>
             
@@ -106,7 +113,5 @@
                         </table>
                     </div>
         
-      
-
     </body>
 </html>
