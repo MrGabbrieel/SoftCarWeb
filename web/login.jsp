@@ -4,6 +4,7 @@
     Author     : Aluno
 --%>
 
+<%@page import="java.lang.String"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -17,17 +18,17 @@
     <body>
     <div class="btn-voltar"><a href="index.jsp">&#8617;</a></div>
 
-      <form class="login-form">
+    <form class="login-form" action="login.jsp" method="post">
         <h1>Boas-Vindas de volta!</h1>
 
         <div class="txtb">
-          <input type="text">
-          <span data-placeholder="E-mail"></span>
+          <input type="text" name="email">
+          <span data-placeholder="E-mail" ></span>
         </div>
 
         <div class="txtb">
-          <input type="password">
-          <span data-placeholder="Senha"></span>
+          <input type="password" name="senha">
+          <span data-placeholder="Senha" ></span>
         </div>
         <div class="txtFgtPsw"><a>Esqueceu sua senha?</a></div>
 
@@ -50,5 +51,21 @@
       });
 
       </script>
+          <script>
+      <%
+        
+          String sn = "123";
+          String em = "gabriel@gmail.com";
+          String email = request.getParameter("email");
+          String senha = request.getParameter("senha");
+           if(email != null && senha != null && !email.isEmpty() && !senha.isEmpty()){
+               session.setAttribute("email", email);
+               response.sendRedirect("index.jsp");
+           }
+           
+          %>
+      
+                
+          </script>
     </body>
 </html>

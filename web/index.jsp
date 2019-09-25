@@ -30,45 +30,8 @@
             
     </head>
     <body>
-        <div class="menu">
-            <div>
-                <input type="checkbox" id="bt-menu">
-                <label for="bt-menu">&#9776;</label>
-            </div>
-            <div class="espaço-logo">
-                <a  href="index.jsp"><img id="logo" src="images/logo.png"></a>
-            </div>
-
-            <div class="itens-menu">
-                <ul class="espaço-itens">
-                    <li><a href="download.jsp">Download Mobile</a></li> 
-                    <li><a href="#">Fale Conosco</a></li>
-                    <li><a href="#">Minha Conta</a></li>
-                </ul>
-
-                <ul class="espaço-cadastro">
-                    <li><a href="login.jsp">Entrar</a></li> 
-                    <li><a href="cadastro.jsp">Cadastrar</a></li>
-                </ul>
-            </div>
-            
-        </div>
-
-        <div class="menu-responsivo">
-
-            <div class="itens-menu-responsivo">
-                <ul class="espaço-itens-responsivo">
-                    <li><a href="download.jsp">Download Mobile</a></li> 
-                    <li><a href="#">Fale Conosco</a></li>
-                    <li><a href="#">Minha Conta</a></li>
-                </ul>
-
-                <ul class="espaço-cadastro-responsivo">
-                    <li><a href="login.jsp">Entrar</a><a href="cadastro.jsp">Cadastrar</a></li>
-                </ul>
-            </div>
-            
-        </div>
+       
+        <%@include file="navbar.jsp" %>
 
             <div class="banner">
                 <div id="fotos">

@@ -17,29 +17,7 @@
     </head>
     <body>
        <!-- MENU -->
-        <div class="menu">
-            <div>
-                <input type="checkbox" id="bt-menu">
-                <label for="bt-menu">&#9776;</label>
-            </div>
-            <div class="espaço-logo">
-                <a  href="index.jsp"><img id="logo" src="images/logo.png"></a>
-            </div>
-
-            <div class="itens-menu">
-                <ul class="espaço-itens">
-                    <li><a href="download.jsp">Download Mobile</a></li> 
-                    <li><a href="#">Fale Conosco</a></li>
-                    <li><a href="#">Minha Conta</a></li>
-                </ul>
-
-                <ul class="espaço-cadastro">
-                    <li><a href="login.jsp">Entrar</a></li> 
-                    <li><a href="#">Cadastrar</a></li>
-                </ul>
-            </div>
-   
-        </div>
+       <%@include file="navbar.jsp" %>
      <!-- /MENU -->
             <div class="texto1">
                 <p id="titulo2">Baixe agora o Softcar!</p>
