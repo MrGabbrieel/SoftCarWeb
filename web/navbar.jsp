@@ -29,7 +29,7 @@
               <div class="itens-menu">
                 <ul class="espaço-itens">
                     <li><a href="download.jsp">Download Mobile</a></li> 
-                    <li><a href="#">Fale Conosco</a></li>
+                    <li><a href="suporte.jsp">Suporte</a></li>
                     <li><a href="#">Minha Conta</a></li>
                   
                 </ul>
@@ -47,7 +47,7 @@
             <div class="itens-menu-responsivo">
                 <ul class="espaço-itens-responsivo">
                     <li><a href="download.jsp">Download Mobile</a></li> 
-                    <li><a href="#">Fale Conosco</a></li>
+                    <li><a href="suporte.jsp">Suporte</a></li>
                     <li><a href="#">Minha Conta</a></li>
                 </ul>
 
