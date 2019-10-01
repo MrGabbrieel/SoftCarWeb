@@ -17,6 +17,16 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
             
     </head>
+    <style>
+        #form{
+            left: 3%;
+            top: 80%;
+            position: fixed;
+            box-shadow: 0px 0px 30px #b1b1b1;
+            border-radius: 50%;
+            width: 90px;
+        }
+    </style>
     <body>
        <%@include file="navbar.jsp" %>
        
