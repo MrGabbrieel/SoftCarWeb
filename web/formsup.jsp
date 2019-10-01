@@ -10,7 +10,6 @@
     <head>
         <title>Suporte Formulário</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="css/home.css"/>
             <link rel="stylesheet" href="css/colorsLightMode.css"/>
             <link rel = "shortcut icon" type = "imagem/x-icon" href = "images/LogoSoft.png"/>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700|Roboto+Slab:400,700&display=swap"/>            
@@ -84,7 +83,7 @@ fieldset.grupo .campo {
 
 .botao {
     font-size: 1.5em;
-    background: #F90;
+    background: #145899;
     border: 0;
     margin-bottom: 1em;
     color: #FFF;
@@ -94,7 +93,7 @@ fieldset.grupo .campo {
 }
 
 .botao:hover {
-    background: #FB0;
+    background: green;
     box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
     text-shadow: none;
 }
@@ -107,15 +106,18 @@ fieldset.grupo .campo {
  
     <body>
       
-      <div class="btn-voltar"><a href="suporte.jsp">&#8617;</a></div>
+     
+                
+          
+      
     <center>
         <br><h2>Preencha o formulário para enviar um Ticket à nossos Administradores!</h2></br>
        <form action="suporte.jsp" method="post">
     <fieldset> 
         <br></br>
            <div class="campo">
-                <label for="estado">Tipo de Pergunta</label>
-                <select name="estado" id="estado">
+                <label for="tipopergunta">Tipo de Pergunta</label>
+                <select name="tipopergunta" id="estado">
                     <option value=""><------------------------------------------></option>
                     <option value="PC">Problemas com a conta</option>
                     <option value="PV">Problemas com uma viagem</option>
@@ -124,7 +126,7 @@ fieldset.grupo .campo {
             </div>
          <div class="campo">
             <label for="email">Assunto</label>
-            <input type="text" id="email" name="email" style="width: 20em" value="">
+            <input type="text" id="assunto" name="assunto" style="width: 20em" value="">
         </div>
   
         <div class="campo">
@@ -137,8 +139,9 @@ fieldset.grupo .campo {
                 <input type="checkbox" name="newsletter" value="1"> Gostaria de receber a resposta por E-mail
             </label>
         </div>
-
-        <button type="submit" name="submit">Enviar</button>
+        <div>
+        <button class="botao" type="submit" name="submit">Enviar</button>
+        </div>
     </fieldset>
      </form>
     </center>
