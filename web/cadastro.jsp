@@ -12,6 +12,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
          <title>Cadastro SoftCar</title>
         <link rel="stylesheet" href="css/cadastro.css">
+        <link rel = "shortcut icon" type = "imagem/x-icon" href = "images/LogoSoft.png"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700|Roboto+Slab:400,700&display=swap"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
         
@@ -34,7 +35,7 @@
         
          <div class="btn-voltar"><a href="index.jsp">&#8617;</a></div>
 
-         <form action="login.jsp" name="formcad" method="get" class="login-form">
+         <form action="login.jsp" name="formcad" method="post" class="login-form">
         <h1>É novo(a) por aqui?</h1>
         <!-- Nome - CPF  - Email - Senha - Confirmar Senha -->
         <div class="txtb">
@@ -64,7 +65,7 @@
         <div class="verify">
           <img id="recaptchaImg" src="images/recaptcha.png">
         </div>
-        <input type="submit" name="Cadastrar" class="logbtn" value="Logar">
+        <input type="submit" name="Cadastrar" class="logbtn" value="Confirmar">
 
         <div class="bottom-text">
           Já tem uma conta? <a href="login.jsp">Faça o Login aqui</a>

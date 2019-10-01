@@ -12,6 +12,7 @@
             <title>Download SoftCar</title>
             <link rel="stylesheet" href="css/home.css"/>
             <link rel="stylesheet" href="css/download.css"/>
+            <link rel = "shortcut icon" type = "imagem/x-icon" href = "images/LogoSoft.png"/>
             <link rel="stylesheet" href="css/colorsLightMode.css"/>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700|Roboto+Slab:400,700&display=swap"/>
     </head>

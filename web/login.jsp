@@ -12,6 +12,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Login</title>
           <link rel="stylesheet" href="css/login.css">
+          <link rel = "shortcut icon" type = "imagem/x-icon" href = "images/LogoSoft.png"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700|Roboto+Slab:400,700&display=swap"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
     </head>
@@ -54,8 +55,7 @@
           <script>
       <%
         
-          String sn = "123";
-          String em = "gabriel@gmail.com";
+    
           String email = request.getParameter("email");
           String senha = request.getParameter("senha");
            if(email != null && senha != null && !email.isEmpty() && !senha.isEmpty()){

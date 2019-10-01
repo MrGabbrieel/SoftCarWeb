@@ -11,6 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="css/home.css"/>
             <link rel="stylesheet" href="css/colorsLightMode.css"/>
+            <link rel = "shortcut icon" type = "imagem/x-icon" href = "images/LogoSoft.png"/>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700|Roboto+Slab:400,700&display=swap"/>            
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
