@@ -21,7 +21,7 @@
        <%@include file="navbar.jsp" %>
        
        <div> 
-      <img id="form" src="images/form.png"></a>
+           <a href="formsup.jsp"><img id="form" src="images/form.png"></a>
        </div>
     </body>
 </html>
