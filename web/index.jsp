@@ -31,8 +31,12 @@
             
     </head>
     <body>
-       
-        <%@include file="navbar.jsp" %>
+      <% String email = request.getParameter("email");%>
+     
+           <%@include file="navbar.jsp" %>
+         
+  
+      
 
             <div class="banner">
                 <div id="fotos">
