@@ -112,20 +112,22 @@ fieldset.grupo .campo {
       
     <center>
         <br><h2>Preencha o formulário para enviar um Ticket à nossos Administradores!</h2></br>
-       <form action="suporte.jsp" method="post">
+         <font color="red"><b>${requestScope.msgErro}</b></font>
+       <form action="ManterTicket" method="POST">
+           
     <fieldset> 
         <br></br>
            <div class="campo">
                 <label for="tipopergunta">Tipo de Pergunta</label>
-                <select name="tipopergunta" id="estado">
+                <select name="tipopergunta" id="tipopergunta">
                     <option value=""><------------------------------------------></option>
-                    <option value="PC">Problemas com a conta</option>
-                    <option value="PV">Problemas com uma viagem</option>
-                    <option value="PV">Problemas com o carro</option>
+                    <option value="Problemas com a Conta">Problemas com a conta</option>
+                    <option value="Problemas com uma Viagem">Problemas com uma viagem</option>
+                    <option value="Problemas com o Veiculo">Problemas com o carro</option>
                 </select>
             </div>
          <div class="campo">
-            <label for="email">Assunto</label>
+            <label for="assunto">Assunto</label>
             <input type="text" id="assunto" name="assunto" style="width: 20em" value="">
         </div>
   
@@ -140,7 +142,7 @@ fieldset.grupo .campo {
             </label>
         </div>
         <div>
-        <button class="botao" type="submit" name="submit">Enviar</button>
+        <button class="botao" type="submit" name="enviar" value="Inserir"> Enviar</button>
         </div>
     </fieldset>
      </form>

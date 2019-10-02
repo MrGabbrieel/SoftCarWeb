@@ -4,6 +4,9 @@
     Author     : Aluno
 --%>
 
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="br.senai.entidades.Tickets"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -33,5 +36,22 @@
        <div> 
            <a href="formsup.jsp"><img id="form" src="images/form.png"></a>
        </div>
+       
+          <div>
+               <%! List<Tickets> lista = new ArrayList<Tickets>();%>
+               <% int ind =1; %>
+               <% lista = (List<Tickets>)request.getSession().getAttribute("listaTickets");
+                    if(lista==null){
+                        lista = new ArrayList();
+                    }
+                %>
+                <h3>Seus Tickets</h3>
+               <% for(Tickets t: lista){ %>
+              
+               
+                <div><%="Seu "+ind+"° Ticket\n Assunto: "+t.getAssunto()+" | Tipo de Pergunta: "+t.getTipopergunta()%></div><br>
+               
+              <% ind++; } %>
+           </div>
     </body>
 </html>
