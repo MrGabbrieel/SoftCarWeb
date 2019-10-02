@@ -48,7 +48,7 @@
 
             <div class="texto1">
                 <p id="titulo1">Nunca foi tão facil chegar ao trabalho!</p>
-                <p id="descriçao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo enim sem, a aliquam arcu auctor in. Nulla facilisi. Suspendisse imperdiet diam non aliquet pellentesque. Donec nec luctus enim. Nullam ultricies mi quis lectus varius, in tincidunt leo tincidunt. Phasellus tincidunt rutrum egestas. Morbi et risus arcu. Pellentesque rhoncus neque ligula, varius tincidunt lorem placerat a. Vivamus sed ex ipsum. Duis justo diam, convallis sed libero a, vehicula semper tellus. Nam vel leo diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec lectus enim. Pellentesque vel sapien sagittis, facilisis ipsum at, tempus urna. Sed metus justo, venenatis in metus vitae, gravida maximus felis. Cras condimentum sapien vitae sagittis vulputate.</p>
+                <p id="descriçao">SoftCar é uma plataforma de carona solidária para você funcionário da Softplan, sendo a mais viável para você que mora muito longe da empresa. Criado pela equipe SixthCube em parceria com o Fiesc/Senai em 2019, o SoftCar conecta motorístas e passageiros funcionários da Softplan para desfrutar de uma carona amiga que irá beneficiar ambas as partes.</p>
             </div>  
                         
                 <div class="tabelas">
@@ -57,25 +57,26 @@
                                         <th>Como surgiu?</th>
                                 </tr>
                                     <tr>
-                                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo enim sem</td>
+                                    <td>Surgiu com a idéia de solucionar o problema de mobilidade dos funcionários da Softplan!</td>
                                 </tr>
                                 
                         </table>
                         <table class="tabela2">
                                 <tr class="titulo">
-                                        <th>O Que é?</th> 
+                                        <th>Quem somos?</th> 
                                 </tr>
                                     <tr>
-                                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo enim sem</td>
+                                        <td>Somos a Startup SixthCube. Surgimos atráves de um projeto do Fiesc/Senais e estamos no mercado desde 2018.   Hoje, visamos em solucionar o seus problemas de locomoção</td>
+                                        
                                     </tr>
                                     
                         </table>
                         <table class="tabela3">
                                 <tr class="titulo">
-                                        <th>Quem somos?</th>
+                                        <th>O que fazemos?</th>
                                 </tr>
                                     <tr>
-                                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo enim sem</td>
+                                        <td>Solucionamos os problemas de todos os funcionários da SoftPlan para que todos possam ter uma melhor locomoção indo e vindo do trabalho.</td>
                                     </tr>    
                                 
                         </table>

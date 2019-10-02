@@ -8,11 +8,19 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Resultado de Inserção</title>
     </head>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        
+    </style>
     <body>
         <%@include file="navbar.jsp" %>
+    
         <h1>Ticket Enviado!</h1>
         <div>
-            O seu Ticket sobre <b>${requestScope.t.tipopergunta}</b> do assunto: <b>${requestScope.t.assunto}</b> foi eniado com sucesso aos nossos Administradores</b>
+            O seu Ticket sobre <b>${requestScope.t.tipopergunta}</b> do assunto: <b>${requestScope.t.assunto}</b> foi enviado com sucesso aos nossos Administradores!</b>
 
         </div>
             <div> <a href="suporte.jsp">Voltar ao suporte</a> </div>

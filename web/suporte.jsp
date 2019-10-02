@@ -49,7 +49,7 @@
                <% for(Tickets t: lista){ %>
               
                
-                <div><%="Seu "+ind+"° Ticket\n Assunto: "+t.getAssunto()+" | Tipo de Pergunta: "+t.getTipopergunta()%></div><br>
+                <div><%=+ind+"° Ticket=\n Assunto: "+t.getAssunto()+" | Tipo de Pergunta: "+t.getTipopergunta()%></div><br>
                
               <% ind++; } %>
            </div>
