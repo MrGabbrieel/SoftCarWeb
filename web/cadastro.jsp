@@ -15,7 +15,15 @@
         <link rel = "shortcut icon" type = "imagem/x-icon" href = "images/LogoSoft.png"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700|Roboto+Slab:400,700&display=swap"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
-        
+        <style>
+        .logosixth img{
+                
+                width: 200px;
+                height: 200px;
+                margin-left: 24%;
+                margin-top: 32.5%;
+              }
+              </style>
         <script>
            <%
           String email = request.getParameter("email");
@@ -72,6 +80,7 @@
         </div>
 
       </form>
+           <div><a class="logosixth"> <img src="images/sixthcubelogo.png"/></a></div>
 
       <script type="text/javascript">
       $(".txtb input").on("focus",function(){
