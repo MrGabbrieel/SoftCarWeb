@@ -18,10 +18,6 @@
     <body>
         
        <div class="menu">
-            <div>
-                <input type="checkbox" id="bt-menu">
-                <label for="bt-menu">&#9776;</label>
-            </div>
             <div class="espaço-logo">
                 <a  href="index.jsp"><img id="logo" src="images/logo.png"></a>
             </div>
