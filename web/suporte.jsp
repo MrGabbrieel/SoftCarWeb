@@ -29,8 +29,10 @@
             border-radius: 50%;
             width: 90px;
         }
+        .sessaoGeral{
+            display: flex;
+        }
         .sessaoTicket{
-            margin-top: 2%;
             margin-left: 5%;
             padding: 30px;
             width: 50%;
@@ -51,9 +53,16 @@
         }
         
         .freqTickets{
-            padding: 25px;
-            margin-left: 55%;
-            margin-top: -20%;
+            margin-top: 2.5%;
+        }
+        .freqTickets img{
+            height: 450px;
+            margin-left: -25px;
+        }
+        .freqTickets h3{
+            font-family:'Roboto Slab',sans-serif;
+            font-size: 25pt;
+            font-weight: bold;
         }
     </style>
     <body>
@@ -70,6 +79,7 @@
                         lista = new ArrayList();
                     }
                 %>
+            <div class="sessaoGeral">
                 <div class="sessaoTicket">
                     <h3>Seus Tickets</h3>
                    <% for(Tickets t: lista){ %>
@@ -81,20 +91,9 @@
               </div>
               
               <div class="freqTickets">
-                  <div>
-                      <h3><b>P: </b>Como faço para capotar um corsa?</h3>
-                      <p><b>R: </b>Pega e dirige igual o Ryan :) brinks</p>
-                  </div>
-                  
-                  <div>
-                      <h3><b>P: </b>Quem são os motoristas?</h3>
-                      <p><b>R: </b>Uma galera bem legal que oferece emprego :)</p>
-                  </div>
-                  
-                  <div>
-                      <h3><b>P: </b>Como sei que não vou ser assaltado?</h3>
-                      <p><b>R: </b>Você não sabe :)</p>
-                  </div>
+                  <h3>Perguntas frequentes:</h3>
+                  <img src="images/ticketFreq.png">
               </div>
+            </div>
     </body>
 </html>
