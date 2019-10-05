@@ -36,7 +36,9 @@
                 <p id="titulo1">Nunca foi tão facil chegar ao trabalho!</p>
                 <p id="descriçao">SoftCar é uma plataforma de carona solidária para você funcionário da Softplan, sendo a mais viável para você que mora muito longe da empresa. O SoftCar conecta motorístas e passageiros Softplayers para desfrutar de uma carona amiga que irá beneficiar ambas as partes.</p>
             </div>  
+           
            <div class="banner-redirect"><img src="images/clica-aqui.png"></div>
+           
                 <div class="tabelas">
                             <table class="tabela1">
                                 <tr class="titulo">

@@ -69,10 +69,12 @@ cursor: pointer;
 
 .txtb span::after{
   content: '';
-  position: absolute;
+  display: block;
+  margin-bottom: -2px;
   width: 0%;
-  height: 2px;
+  height: 3px;
   background-color: #145899;
+  border-radius: 2px;
   transition: .3s;
 }
 
