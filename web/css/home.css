@@ -48,14 +48,6 @@
     .itens-menu a:hover {
         font-weight: bold;
     }
-    .espaço-cadastro{
-        margin-left: 350px;
-        font-size: 10pt;
-    }
-    .espaço-cadastro li a {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
     #descriçao{
         font-family: 'Open Sans',sans-serif;
         font-size: 18pt;
@@ -70,21 +62,21 @@
         position: absolute;
     }
     .texto1{
-        padding: 50px;
+        padding-top: 70px;
+        padding-bottom: 50px;
     }
 
     #titulo1{
         font-family:'Roboto Slab',sans-serif;
-        font-size: 36pt;
+        font-size: 30pt;
         font-weight: bold;
     }
 
     #descriçao{
         font-family: 'Open Sans',sans-serif;
-        font-size: 18pt;
+        font-size: 17pt;
         padding-top: 25px;
     }
-    .banner-redirect{}
     .tabelas{
         display: flex;
         margin: 0px 50px 50px 50px;

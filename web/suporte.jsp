@@ -30,6 +30,7 @@
             width: 90px;
         }
         .sessaoGeral{
+            padding-top: 70px;
             display: flex;
         }
         .sessaoTicket{

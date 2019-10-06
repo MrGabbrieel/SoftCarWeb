@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <title>Suporte Formulário</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -20,13 +20,40 @@
     margin: 0;
     padding: 0;
 }
-
+body{
+      min-height: 100vh;
+      background-image: url(images/banner3.png);
+      background-size: cover;
+    }
+font{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -80px;
+}
+h2{
+    margin-top: 30px;
+    font-family: 'Roboto Slab',sans-serif;
+    position: absolute;
+    top: 15px;
+    left: 18%;
+    background: none;
+    color: #ffffff;
+}
 fieldset {
-    border: 0;
+    position: absolute;
+    border: none;
+    border-radius: 20px;
+    background-color: #ffffff;
+    width: 450px;
+    height: 410px;
+    padding: 25px 10px;
+    left: 31%;
+    top: 20%;
+    text-align: center;
 }
 
 body, input, select, textarea, button {
-    font-family: sans-serif;
+    font-family: 'Roboto',sans-serif;
     font-size: 1em;
 }
 
@@ -45,7 +72,7 @@ body, input, select, textarea, button {
 
 .campo label {
     margin-bottom: 0.2em;
-    color: #666;
+    color: #000;
     display: block;
 }
 
@@ -60,9 +87,11 @@ fieldset.grupo .campo {
 .campo input[type="tel"],
 .campo select,
 .campo textarea {
-    padding: 0.2em;
-    border: 1px solid #CCC;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 7px #b1b1b1;
     display: block;
     resize: none;
 }
@@ -81,22 +110,24 @@ fieldset.grupo .campo {
     margin-right: 1em;
 }
 
-.botao {
-    font-size: 1.5em;
-    background: #145899;
-    border: 0;
-    margin-bottom: 1em;
-    color: #FFF;
-    padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-}
+.botao{
+    display: block;
+    width: 150px;
+    height: 50px;
+    border: none;
+    background-color: #145899;
+    color: #ffffff;
+    outline: none;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 20px;
+    font-family: 'Roboto Slab',sans-serif;
+    font-size: 11pt;
+    }
 
-.botao:hover {
-    background: green;
-    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: none;
-}
+    .botao:hover{
+    background-color: #387ab8;
+    }
 
 .botao, select, label.checkbox {
     cursor: pointer;
@@ -105,34 +136,27 @@ fieldset.grupo .campo {
     </head>
  
     <body>
-      
-     
-                
-          
-      
-    <center>
-        <br><h2>Preencha o formulário para enviar um Ticket à nossos Administradores!</h2></br>
-         <font color="red"><b>${requestScope.msgErro}</b></font>
+    <h2>Preencha o formulário para enviar um Ticket à nossos Administradores!</h2>
        <form action="ManterTicket" method="POST">
            
-    <fieldset> 
-        <br></br>
+    <fieldset>
+        <center>
            <div class="campo">
-                <label for="tipopergunta">Tipo de Pergunta</label>
+                <label for="tipopergunta">Tipo de Pergunta*</label>
                 <select name="tipopergunta" id="tipopergunta">
-                    <option value=""><------------------------------------------></option>
+                    <option value="">-</option>
                     <option value="Problemas com a Conta">Problemas com a conta</option>
                     <option value="Problemas com uma Viagem">Problemas com uma viagem</option>
                     <option value="Problemas com o Veiculo">Problemas com o carro</option>
                 </select>
             </div>
          <div class="campo">
-            <label for="assunto">Assunto</label>
+            <label for="assunto">Assunto*</label>
             <input type="text" id="assunto" name="assunto" style="width: 20em" value="">
         </div>
   
         <div class="campo">
-            <label for="mensagem">Mensagem</label>
+            <label for="mensagem">Mensagem*</label>
             <textarea rows="6"  style="width: 20em" id="mensagem" name="mensagem"></textarea>
         </div>
 
@@ -144,9 +168,10 @@ fieldset.grupo .campo {
         <div>
         <button class="botao" type="submit" name="enviar" value="Inserir"> Enviar</button>
         </div>
+            <font color="red"><b>${requestScope.msgErro}</b></font>
+        </center>
     </fieldset>
      </form>
-    </center>
     
     </body>
 </html>
