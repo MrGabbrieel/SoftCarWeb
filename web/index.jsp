@@ -152,7 +152,7 @@
         padding-left: 50px;
         margin-left: -850px;
         background: none;
-        margin-top: 20px;
+        margin-top: 85px;
     }
     .senai{
         margin-top: 90px;
