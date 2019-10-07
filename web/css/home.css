@@ -45,9 +45,6 @@
         text-align: center;
         width: 130px;
     }
-    .itens-menu a:hover {
-        font-weight: bold;
-    }
     #descriçao{
         font-family: 'Open Sans',sans-serif;
         font-size: 18pt;

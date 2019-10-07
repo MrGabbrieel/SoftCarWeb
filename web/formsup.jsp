@@ -22,7 +22,7 @@
 }
 body{
       min-height: 100vh;
-      background-image: url(images/banner3.png);
+      background-image: url(images/banner6.png);
       background-size: cover;
     }
 font{

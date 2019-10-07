@@ -30,6 +30,10 @@
         font-weight: bold;
         color: #145899;
     }
+    .itens-menu a:hover {
+        font-weight: bold;
+        trasition: 0.4s;
+    }
     </style>
     <body>
         
