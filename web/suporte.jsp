@@ -72,20 +72,27 @@
        <div> 
            <a href="formsup.jsp"><img id="form" src="images/form.png"></a>
        </div>
+        
        
+         
                <%! List<Tickets> lista = new ArrayList<Tickets>();%>
                <% int ind =1; %>
                <% lista = (List<Tickets>)request.getSession().getAttribute("listaTickets");
                     if(lista==null){
-                        lista = new ArrayList();
+                        lista = new ArrayList();      
+                       
                     }
                 %>
+                
             <div class="sessaoGeral">
                 <div class="sessaoTicket">
-                    <h3>Seus Tickets</h3>
+                    <h3>Seus Tickets</h3>   
+                    
+                    <%if(lista.isEmpty()==true){
+                        out.print("Não há Tickets enviado por você");}%>
+            
                    <% for(Tickets t: lista){ %>
-
-
+                       
                     <div><b class='nTicket'><%=+ind+"° Ticket</b> | <b>Tipo de Pergunta:</b> "+t.getTipopergunta()+"<br> <b>Assunto:</b> "+t.getAssunto()%></div><br>
                 
               <% ind++; } %>

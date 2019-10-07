@@ -30,7 +30,7 @@ public class ManterTicket extends HttpServlet {
         String mensagem = request.getParameter("mensagem");
         
         if (tipopergunta == null || tipopergunta.equals("")) {
-            request.setAttribute("msgErro", "O campo é obrigatório!");
+            request.setAttribute("msgErro", "O Tipo de Pergunta é obrigatório!");
             
             request.getRequestDispatcher("/formsup.jsp").forward(request, response);
             return;
@@ -44,7 +44,7 @@ public class ManterTicket extends HttpServlet {
             return;
         }else 
                   if (mensagem == null || mensagem.equals("")) {
-                request.setAttribute("msgErro", "O cargo é obrigatório!");
+                request.setAttribute("msgErro", "A menssagem é obrigatória!");
                 
                 request.getRequestDispatcher("/formsup.jsp").forward(request, response);
             
