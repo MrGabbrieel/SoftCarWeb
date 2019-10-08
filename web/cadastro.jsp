@@ -155,7 +155,7 @@
     .logosixth img{
         width: 200px;
         margin-left: 24%;
-        margin-top: 35%;
+        margin-top: 37%;
     }   
     @media(max-width :800px){
     .login-form{left: 50%}
