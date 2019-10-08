@@ -302,10 +302,10 @@
                     </div>
            
            <footer>
-               <iframe width="100%" height="269" src="https://mdbootstrap.com/api/snippets/embed/1275096/fullscreen" frameborder="0"></iframe>
+               <iframe width="100%" height="269px" src="https://mdbootstrap.com/api/snippets/embed/1279184/fullscreen" frameborder="0"></iframe>
                <img class="6cube" src="images/sixthcubelogo.png" width="180px">
-               <img class="senai" src="images/logo-senai.png" width="180px">
-               <img class="soft" src="images/logo-softplan.png" width="180px">
+               <a><img class="senai" src="images/logo-senai.png" width="180px" href="http://sc.senai.br/" target="_blank"></a>
+               <a><img class="soft" src="images/logo-softplan.png" width="180px"  href="https://www.softplan.com.br/" target="_blank"  ></a>
            </footer>      
         <script>
             $("#fotos > div:gt(0)").hide();
