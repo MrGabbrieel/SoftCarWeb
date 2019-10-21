@@ -9,10 +9,10 @@
 <%@page import="br.senai.entidades.Tickets"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <title>Suporte</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" lang="pt-br">
         <link rel="stylesheet" href="css/home.css"/>
             <link rel="stylesheet" href="css/colorsLightMode.css"/>
             <link rel = "shortcut icon" type = "imagem/x-icon" href = "images/LogoSoft.png"/>
@@ -74,7 +74,6 @@
        </div>
         
        
-         
                <%! List<Tickets> lista = new ArrayList<Tickets>();%>
                <% int ind =1; %>
                <% lista = (List<Tickets>)request.getSession().getAttribute("listaTickets");
@@ -89,7 +88,7 @@
                     <h3>Seus Tickets</h3>   
                     
                     <%if(lista.isEmpty()==true){
-                        out.print("Não há Tickets enviado por você");}%>
+                        out.print("Não há Tickets enviados por você!");}%>
             
                    <% for(Tickets t: lista){ %>
                        

@@ -2,10 +2,10 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <title>Resultado de Inserção</title>
-        <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     </head>
     <style>
         *{
