@@ -4,8 +4,12 @@
     Author     : Aluno
 --%>
 
+<%@page import="java.util.concurrent.ExecutionException"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="br.senai.entidades.Cadastro"%> 
+<%@page import="br.senai.dao.CadDAO"%> 
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -162,21 +166,31 @@
     }   
               </style>
         <script>
-           <%
-          String email = request.getParameter("email");
-          String senha = request.getParameter("senha");
-
-           if(email != null && senha != null && !email.isEmpty() && !senha.isEmpty() ){
-               session.setAttribute("email", email);
-               
-               response.sendRedirect("login.jsp");
-           }
-          %>
+     
                 
             </script>
     
     </head>
     <body>
+        
+        <%
+            try{
+                Cadastro cad = new Cadastro();
+                CadDAO cdDao = new CadDAO();
+                if(request.getParameter("nome").equals("") || request.getParameter("email").equals("") || request.getParameter("senha").equals("")){
+                     response.sendRedirect("cadastro.jsp");
+                }else{
+                    cad.setNome(request.getParameter("nome"));
+                    cad.setEmail(request.getParameter("email"));
+                    cad.setSenha(request.getParameter("senha"));
+                    cdDao.inserir(cad);
+                    response.sendRedirect("administrador.jsp");
+                }
+            }catch(Exception erro){
+                throw new RuntimeException("Erro 6:"+erro);
+                
+            }
+        %>
         
          <div class="btn-voltar"><a href="index.jsp">&#8617;</a></div>
 

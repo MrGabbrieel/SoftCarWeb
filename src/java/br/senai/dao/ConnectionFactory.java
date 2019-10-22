@@ -19,10 +19,11 @@ public class ConnectionFactory {
         if(conexao==null){
             try {
                 Class.forName("com.mysql.jdbc.Driver");
-               return conexao = DriverManager.getConnection(URL_CONEXAO, USUARIO, SENHA);
+             conexao = DriverManager.getConnection(URL_CONEXAO, USUARIO, SENHA);
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
-                
+                 throw new RuntimeException("Erro 1: "+ex);
+                 
               } catch (SQLException ex) {
                 Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
                 }
