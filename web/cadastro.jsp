@@ -173,28 +173,11 @@
     </head>
     <body>
         
-        <%
-            try{
-                Cadastro cad = new Cadastro();
-                CadDAO cdDao = new CadDAO();
-                if(request.getParameter("nome").equals("") || request.getParameter("email").equals("") || request.getParameter("senha").equals("")){
-                     response.sendRedirect("cadastro.jsp");
-                }else{
-                    cad.setNome(request.getParameter("nome"));
-                    cad.setEmail(request.getParameter("email"));
-                    cad.setSenha(request.getParameter("senha"));
-                    cdDao.inserir(cad);
-                    response.sendRedirect("administrador.jsp");
-                }
-            }catch(Exception erro){
-                throw new RuntimeException("Erro 6:"+erro);
-                
-            }
-        %>
+        
         
          <div class="btn-voltar"><a href="index.jsp">&#8617;</a></div>
 
-         <form action="login.jsp" name="formcad" method="post" class="login-form">
+         <form action="cad_inserir.jsp" name="formcad" method="post" class="login-form">
         <h1>É novo(a) por aqui?</h1>
         <!-- Nome - CPF  - Email - Senha - Confirmar Senha -->
         <div class="txtb">

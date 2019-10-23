@@ -12,9 +12,9 @@
            try{
               CadDAO cdDao = new CadDAO();
               cdDao.excluir(Integer.parseInt(request.getParameter("cod_cadastro")));
-               
+              response.sendRedirect("administrador.jsp");
            }catch(Exception erro){
-               throw new RuntimeException("Erro 8:"+erro );
+               throw new RuntimeException("Erro 8:"+erro);
            }
        
        %>
