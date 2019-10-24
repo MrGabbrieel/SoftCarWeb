@@ -1,4 +1,5 @@
 
+<%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="br.senai.entidades.Cadastro" %>
@@ -21,47 +22,34 @@
         </form>
         
         <% 
-            try{
+         
+                ArrayList<Cadastro> cadlist = (ArrayList) request.getAttribute("listUser");
                 out.print("<table>");
                 out.print("<tr>");
                 out.print("<th>Codigo</th><th>Nome</th><th>Cpf</th><th>Email</th><th>Senha</th><th>Editar</th><th>Excluir</th>");
                 CadDAO cdDao = new CadDAO();
-                if(request.getParameter("nome") == "" || request.getParameter("nome") == null){
-                    ArrayList<Cadastro> lista = cdDao.listarTodos();
-                    for(int num= 0; num < lista.size(); num++ ){
+              
+       
+                    for(Cadastro i: cadlist ){
                          out.print("<tr>");
-                         out.print("<td>"+lista.get(num).getCod_cadastro()+"</td>");
-                         out.print("<td>"+lista.get(num).getNome()+"</td>");
-                         out.print("<td>"+lista.get(num).getCpf()+"</td>");
-                         out.print("<td>"+lista.get(num).getEmail()+"</td>");
-                         out.print("<td>"+lista.get(num).getSenha()+"</td>");
-                         out.print("<td><a href='alterar.jsp?cod_cadastro="+lista.get(num).getCod_cadastro()+"&nome="+lista.get(num).getNome()+"&cpf="+lista.get(num).getCpf()+"&email="+lista.get(num).getEmail()+"&senha="+lista.get(num).getSenha()+" '>CLIQUE</a></td>");
-                         out.print("<td><a href='excluir.jsp?cod_cadastro="+lista.get(num).getCod_cadastro()+"&nome="+lista.get(num).getNome()+"&email="+lista.get(num).getEmail()+" '>CLIQUE</a></td>");
+                         out.print("<td>"+i.getCod_cadastro()+"</td>");
+                         out.print("<td>"+i.getNome()+"</td>");
+                         out.print("<td>"+i.getCpf()+"</td>");
+                         out.print("<td>"+i.getEmail()+"</td>");
+                         out.print("<td>"+i.getSenha()+"</td>");
+                        out.print("<td><a href='alterar.jsp?cod_cadastro="+i.getCod_cadastro()+"&nome="+i.getNome()+"&cpf="+i.getCpf()+"&email="+i.getEmail()+"&senha="+i.getSenha()+" '>CLIQUE</a></td>");
+                         out.print("<td><a href='excluir.jsp?cod_cadastro="+i.getCod_cadastro()+"&nome="+i.getNome()+"&email="+i.getEmail()+" '>CLIQUE</a></td>");
                          out.print("</tr>");
                         
                     }   
                     
-                }else{
-                    ArrayList<Cadastro> lista = cdDao.listarTodos();
-                    for(int num= 0; num < lista.size(); num++ ){
-                         out.print("<tr>");
-                         out.print("<td>"+lista.get(num).getCod_cadastro()+"</td>");
-                         out.print("<td>"+lista.get(num).getNome()+"</td>");
-                         out.print("<td>"+lista.get(num).getCpf()+"</td>");
-                         out.print("<td>"+lista.get(num).getEmail()+"</td>");
-                         out.print("<td>"+lista.get(num).getSenha()+"</td>");
-                         out.print("<td><a href='alterar.jsp?cod_cadastro="+lista.get(num).getCod_cadastro()+"&nome="+lista.get(num).getNome()+"&cpf="+lista.get(num).getCpf()+"&email="+lista.get(num).getEmail()+"&senha="+lista.get(num).getSenha()+" '>CLIQUE</a></td>");
-                         out.print("<td><a href='excluir.jsp?cod_cadastro="+lista.get(num).getCod_cadastro()+"&nome="+lista.get(num).getNome()+"&email="+lista.get(num).getEmail()+" '>CLIQUE</a></td>");
-                         out.print("</tr>"); 
-                    }   
-                }
+                
+                   
+                
                 
                 out.print("</tr>");
                 out.print("</table>");
-            }catch(Exception erro){
-                throw new RuntimeException("Erro 9: "+erro);
-            }
-        
+            
         %>
         <a href="administrador.jsp">novo</a>
     </body>

@@ -37,8 +37,11 @@ public class CadDAO {
             stmt.setString(2, cadastro.getCpf());
             stmt.setString(3, cadastro.getEmail());
             stmt.setString(4, cadastro.getSenha());
-            stmt.execute();
+            
+            stmt.executeUpdate();
+            
             stmt.close();
+            conn.close();
             
         }catch(Exception erro){
             throw new RuntimeException("Erro 2: "+erro);
@@ -82,11 +85,13 @@ public class CadDAO {
               rs = st.executeQuery(sql);
               while(rs.next()){
                   Cadastro cadastro = new Cadastro();
+                  
                   cadastro.setCod_cadastro(rs.getInt("cod_cadastro"));
                   cadastro.setNome(rs.getString("nome"));
                   cadastro.setCpf(rs.getString("cpf"));
                   cadastro.setEmail(rs.getString("email"));
                   cadastro.setSenha(rs.getString("senha"));
+                  
                   lista.add(cadastro);
                   
               }
