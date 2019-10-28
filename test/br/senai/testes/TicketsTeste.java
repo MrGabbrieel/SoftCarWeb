@@ -1,7 +1,7 @@
 
 package br.senai.testes;
 
-import br.senai.entidades.Tickets;
+import br.senai.model.Tickets;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

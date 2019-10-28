@@ -1,8 +1,9 @@
 
-package br.senai.entidades;
+package br.senai.model;
 
 
 public class Tickets {
+    private int cod_ticket;
     private String tipopergunta;
     private String assunto;
     private String mensagem;
@@ -38,7 +39,17 @@ public class Tickets {
 
     public void setMensagem(String mensagem) {
         this.mensagem = mensagem;
+    } 
+    
+    public int getCod_ticket() {
+        return cod_ticket;
     }
-    
-    
+
+    public void setCod_ticket(int cod_ticket) {
+        this.cod_ticket = cod_ticket;
+    }
+     @Override
+    public String toString() {
+        return "Ticket" + "id=" + cod_ticket + ", tipopergunta=" + tipopergunta + '}';
+    }
 }

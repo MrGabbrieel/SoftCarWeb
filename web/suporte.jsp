@@ -6,7 +6,7 @@
 
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
-<%@page import="br.senai.entidades.Tickets"%>
+<%@page import="br.senai.model.Tickets"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="pt-br">

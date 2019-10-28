@@ -7,8 +7,8 @@
 <%@page import="java.util.concurrent.ExecutionException"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="br.senai.entidades.Cadastro"%> 
-<%@page import="br.senai.dao.CadDAO"%> 
+<%@page import="br.senai.model.Usuario"%> 
+<%@page import="br.senai.dao.CadastroDAO"%> 
 
 <!DOCTYPE html>
 <html>
@@ -177,7 +177,8 @@
         
          <div class="btn-voltar"><a href="index.jsp">&#8617;</a></div>
 
-         <form action="Cadastrar" method="post" class="login-form">
+         <form action="CadastroServlet" method="post" class="login-form">
+             
         <h1>É novo(a) por aqui?</h1>
         <!-- Nome - CPF  - Email - Senha - Confirmar Senha -->
         <div class="txtb">
@@ -207,7 +208,7 @@
         <div class="verify">
           <img id="recaptchaImg" src="images/recaptcha.png">
         </div>
-        <input type="submit" name="Cadastrar" class="logbtn" value="Confirmar">
+        <input type="submit" name="ENVIAR" value="CADASTRAR" class="logbtn" >
 
         <div class="bottom-text">
           Já tem uma conta? <a href="login.jsp">Faça o Login aqui</a>

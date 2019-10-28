@@ -137,7 +137,7 @@ fieldset.grupo .campo {
  
     <body>
     <h2>Preencha o formulário para enviar um Ticket à nossos Administradores!</h2>
-       <form action="ManterTicket" method="POST">
+       <form action="TicketsSevlet" method="post">
            
     <fieldset>
         <center>
@@ -166,7 +166,7 @@ fieldset.grupo .campo {
             </label>
         </div>
         <div>
-        <button class="botao" type="submit" name="enviar" value="Inserir"> Enviar</button>
+        <button class="botao" type="submit" name="enviar" value="EnviarTicket"> Enviar</button>
         </div>
             <font color="red"><b>${requestScope.msgErro}</b></font>
         </center>

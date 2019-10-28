@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 public class ConnectionFactory {
     
     private static Connection conexao;
-    private static final String URL_CONEXAO = "jdbc:mysql://localhost/softcarsup";
+    private static final String URL_CONEXAO = "jdbc:mysql://localhost:3306/softcarsup";
     private static final String USUARIO = "root";
     private static final String SENHA = "";
     

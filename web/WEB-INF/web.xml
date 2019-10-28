@@ -8,6 +8,18 @@
         <servlet-name>Cadastrar</servlet-name>
         <servlet-class>br.senai.Cadastrar</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CadastroServlet</servlet-name>
+        <servlet-class>br.senai.servlets.CadastroServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>br.senai.servlets.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TicketsSevlet</servlet-name>
+        <servlet-class>br.senai.servlets.TicketsSevlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Logar</servlet-name>
         <url-pattern>/Logar</url-pattern>
@@ -15,6 +27,18 @@
     <servlet-mapping>
         <servlet-name>Cadastrar</servlet-name>
         <url-pattern>/Cadastrar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CadastroServlet</servlet-name>
+        <url-pattern>/CadastroServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TicketsSevlet</servlet-name>
+        <url-pattern>/TicketsSevlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
