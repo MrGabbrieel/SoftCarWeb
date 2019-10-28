@@ -1,9 +1,9 @@
 
+<%@page import="br.senai.model.Usuario"%>
+<%@page import="br.senai.dao.CadastroDAO"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="br.senai.entidades.Cadastro" %>
-<%@page import="br.senai.dao.CadDAO" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,22 +23,22 @@
         
         <% 
          
-                ArrayList<Cadastro> cadlist = (ArrayList) request.getAttribute("listUser");
+                ArrayList<Usuario> cadlist = (ArrayList) request.getAttribute("Usuario");
                 out.print("<table>");
                 out.print("<tr>");
                 out.print("<th>Codigo</th><th>Nome</th><th>Cpf</th><th>Email</th><th>Senha</th><th>Editar</th><th>Excluir</th>");
-                CadDAO cdDao = new CadDAO();
+                CadastroDAO cdDao = new CadastroDAO();
               
        
-                    for(Cadastro i: cadlist ){
+                    for(Usuario i: cadlist){
                          out.print("<tr>");
-                         out.print("<td>"+i.getCod_cadastro()+"</td>");
-                         out.print("<td>"+i.getNome()+"</td>");
+                         out.print("<td>"+i.getCod_usuario()+"</td>");
+                         out.print("<td>"+i.getNomeUser()+"</td>");
                          out.print("<td>"+i.getCpf()+"</td>");
                          out.print("<td>"+i.getEmail()+"</td>");
                          out.print("<td>"+i.getSenha()+"</td>");
-                        out.print("<td><a href='alterar.jsp?cod_cadastro="+i.getCod_cadastro()+"&nome="+i.getNome()+"&cpf="+i.getCpf()+"&email="+i.getEmail()+"&senha="+i.getSenha()+" '>CLIQUE</a></td>");
-                         out.print("<td><a href='excluir.jsp?cod_cadastro="+i.getCod_cadastro()+"&nome="+i.getNome()+"&email="+i.getEmail()+" '>CLIQUE</a></td>");
+                        out.print("<td><a href='alterar.jsp?cod_cadastro="+i.getCod_usuario()+"&nome="+i.getNomeUser()+"&cpf="+i.getCpf()+"&email="+i.getEmail()+"&senha="+i.getSenha()+" '>CLIQUE</a></td>");
+                         out.print("<td><a href='excluir.jsp?cod_cadastro="+i.getCod_usuario()+"&nome="+i.getNomeUser()+"&email="+i.getEmail()+" '>CLIQUE</a></td>");
                          out.print("</tr>");
                         
                     }   

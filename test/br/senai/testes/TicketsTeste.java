@@ -24,7 +24,7 @@ public class TicketsTeste {
         if(t1.getTipopergunta().equals(t1.getAssunto())){
             System.out.println("+=== 3º Exibição ===+\n O tipo de pergunta deve ser Difetende de Assunto");
         }else if(null == t1.getMensagem() || null == t1.getAssunto() || null == t1.getTipopergunta()){
-            System.out.println("+=== 4º Exibição ===+\n Os campos não podem ser nulo");
+           fail("+=== 4º Exibição ===+\n Os campos não podem ser nulo");
         }
         
             

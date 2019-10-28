@@ -11,7 +11,7 @@ import java.sql.SQLException;
        public TicketsDAO(){
             con = ConnectionFactory.getConexao();
         }
-         public void inserirTickets(Tickets t){
+         public boolean inserirTickets(Tickets t){
             try {
             
             String sql = "insert into tickets(tipopergunta, assunto, mensagem)" + " values(?,?,?)";
@@ -26,7 +26,8 @@ import java.sql.SQLException;
             
         } catch (SQLException e) {
             System.out.println(e);
+                return false;
         }
-        
+        return true;
     }
 }

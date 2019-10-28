@@ -12,11 +12,15 @@ public class LoginDAO {
     
     Connection con;
 
-    public LoginDAO() {
+    public boolean LoginDAO() {
          con = ConnectionFactory.getConexao();
+         if(con != null){
+         return true;
+         }else{
+         return false;}
     }
     
-    public Usuario logar(Usuario user) throws SQLException{
+    public  Usuario logar(Usuario user) throws SQLException{
     
         String sql = "select*from usuario where email='"+user.getEmail()+"'";
         PreparedStatement ps = con.prepareStatement(sql);

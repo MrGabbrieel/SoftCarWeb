@@ -6,7 +6,7 @@ public class Usuario {
     
     
 //cadastro
-    private int cod_cadastro;
+    private int cod_usuario;
     private String cpf;
     private String email;
     private String senha;
@@ -33,8 +33,8 @@ public class Usuario {
 
     //login
 
-    public Usuario(int cod_cadastro, String nomeUser, boolean logado) {
-        this.cod_cadastro = cod_cadastro;
+    public Usuario(int cod_usuario, String nomeUser, boolean logado) {
+        this.cod_usuario = cod_usuario;
         this.nomeUser = nomeUser;
         this.logado = logado;
  
@@ -46,12 +46,12 @@ public class Usuario {
     }
 
     
-    public int getCod_cadastro() {
-        return cod_cadastro;
+    public int getCod_usuario() {
+        return cod_usuario;
     }
 
-    public void setId(int cod_cadastro) {
-        this.cod_cadastro = cod_cadastro;
+    public void setCod_usuario(int cod_cadastro) {
+        this.cod_usuario = cod_usuario;
     }
  
     public String getEmail() {
@@ -81,6 +81,10 @@ public class Usuario {
     public boolean isLogado() {
         return logado;
     }
+    
+    public boolean getLogado(boolean logado){
+        return logado;
+    }
 
     public void setLogado(boolean logado) {
         this.logado = logado;
@@ -95,7 +99,7 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario{" + "id=" + cod_cadastro + ", nomeUser=" + nomeUser + '}';
+        return "Usuario{" + "id=" + cod_usuario + ", nomeUser=" + nomeUser + '}';
     }
 
 
