@@ -153,7 +153,7 @@
     <body>
     <div class="btn-voltar"><a href="index.jsp">&#8617;</a></div>
 
-    <form class="login-form" action="login.jsp" method="post">
+    <form class="login-form" action="LoginServlet" method="post">
         <h1>Boas-Vindas de volta!</h1>
 
         <div class="txtb">
@@ -187,13 +187,13 @@
       });
 
       </script>
-    <%
+    <% /*
         String email = request.getParameter("email");
           String senha = request.getParameter("senha");
            if(email != null && senha != null && !email.isEmpty() && !senha.isEmpty()){
                session.setAttribute("email", email);
                response.sendRedirect("index.jsp");
            }
-           %>
+          */ %>
      </body>
 </html>

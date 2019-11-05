@@ -96,7 +96,7 @@ public class CadastroServlet extends HttpServlet {
             }else{
                 out.println("<script type=\"text/javascript\">");
                 out.println("alert('Senha e Confirmar Senha não estão iguals !')");
-                out.println("location='/SoftCarWeb/cadastro.jsp';");
+                out.println("location='/SA Web/cadastro.jsp';");
                 out.println("</script>");
             }
             // end comparar senhas 

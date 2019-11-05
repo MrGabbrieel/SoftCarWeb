@@ -38,8 +38,8 @@ public class LoginServlet extends HttpServlet {
                      HttpSession session = request.getSession();
                    //
                    // pegar dados da pagina 
-                   String email = request.getParameter("login");
-                   String senhaLogin = request.getParameter("senhaLogin");
+                   String email = request.getParameter("email");
+                   String senhaLogin = request.getParameter("senha");
                   //
                     
                   // mandar para o banco de dados 
@@ -54,11 +54,11 @@ public class LoginServlet extends HttpServlet {
                         session.setAttribute("usuario", u);
 
                       // mandar para homeLogado 
-                       request.getRequestDispatcher("/homeDepoisDeLogar.jsp").forward(request, response);   
+                       request.getRequestDispatcher("/indexDpsDeLogar.jsp").forward(request, response);   
                    }else{
                             out.println("<script type=\"text/javascript\">");
                             out.println("alert('Senha incorreta ou Softplayer não cadastrado !! ')");
-                            out.println("location='/SoftCarWeb/login.jsp';");
+                            out.println("location='/SA Web/login.jsp';");
                             out.println("</script>");
                      }
                  

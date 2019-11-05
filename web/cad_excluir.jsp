@@ -1,6 +1,6 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="br.senai.dao.CadDAO"%> 
+<%@page import="br.senai.dao.CadastroDAO"%> 
 <!DOCTYPE html>
 <html>
     <head>

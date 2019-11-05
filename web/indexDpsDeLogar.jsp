@@ -253,14 +253,9 @@
 }
     </style>
     <body>
-      <%
-      HttpSession sessao = request.getSession();
-      sessao.setAttribute("nome", "senha");
-      %>
-      
-           <%@include file="navbar.jsp" %>
-         
-                  
+      <% String email = request.getParameter("email");%>
+     
+      <%@include file="navbarLogado.jsp" %>
             <div class="banner">
                 <div id="fotos">
                     <div><img src="images/banner1.png" width="100%"></div>

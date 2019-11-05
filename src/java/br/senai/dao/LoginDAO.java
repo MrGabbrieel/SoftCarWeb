@@ -12,42 +12,29 @@ public class LoginDAO {
     
     Connection con;
 
-    public boolean LoginDAO() {
+    public LoginDAO() {
          con = ConnectionFactory.getConexao();
-         if(con != null){
-         return true;
-         }else{
-         return false;}
+        
     }
     
     public  Usuario logar(Usuario user) throws SQLException{
     
-        String sql = "select*from usuario where email='"+user.getEmail()+"'";
+        String sql = "select * from usuario where email = '"+user.getEmail()+"' and senha = '"+user.getSenha()+"'";
         PreparedStatement ps = con.prepareStatement(sql);
+        
+        //ps.setString(1, user.getEmail());
+        //ps.setString(2, user.getSenha() );
         ResultSet rs = ps.executeQuery(sql);
         //
-
-        // variaveis para pegar os dados do banco
-        String s = null;
-        int cod_cadastro = 0;
-        String nomeUser = null;
-        boolean entrar = false;
+ 
         //
-
-        while(rs.next()){
-
-         cod_cadastro = rs.getInt("cod_cadastro");
-         s = rs.getString("senha");
-         nomeUser = rs.getString("nome");
-
+        Usuario usuario = null;
+        if(rs.next()){
+        usuario = new Usuario(rs.getInt("cod_usuario"), rs.getString("nome"), true);
          
         }
-        
-        if(user.getSenha().equals(s)){
-            entrar = true;
-        }
-        
-        Usuario usuario = new Usuario(cod_cadastro, nomeUser, entrar);
+              
+       
         
         ps.close();
         con.close();

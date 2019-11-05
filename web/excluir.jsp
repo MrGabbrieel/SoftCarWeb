@@ -1,8 +1,4 @@
-<%-- 
-    Document   : alterar
-    Created on : 23/10/2019, 15:10:19
-    Author     : Aluno
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
