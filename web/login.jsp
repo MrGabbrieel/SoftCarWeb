@@ -167,7 +167,7 @@
         </div>
         <div class="txtFgtPsw"><a>Esqueceu sua senha?</a></div>
 
-        <input type="submit" class="logbtn" value="Logar">
+        <input type="submit" class="logbtn" name="ENVIAR" value="LOGAR">
 
         <div class="bottom-text">
           Não tem uma conta? <a href="cadastro.jsp">Quero me cadastrar</a>
