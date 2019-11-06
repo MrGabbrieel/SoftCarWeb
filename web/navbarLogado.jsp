@@ -53,7 +53,8 @@
                 </ul>
 
                <ul class="espaço-cadastro">
-                      <li class=""><a class="aNav" id="" >${sessionScope.usuario.nomeUser}</a>
+                      <li class=""><a class="aNav" id="" >Bem-Vindo, ${sessionScope.usuario.nomeUser}</a>
+                      <li><input type="button" class="logbtn" name="SAINDO" value="SAIR"></li>
                 </ul>
             </div>
             

@@ -1,5 +1,6 @@
 
 
+<%@page import="br.senai.model.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -38,7 +39,18 @@
         }
     </style>
     <body>
-        <%@include file="navbar.jsp" %>
+         
+      <%//menu
+            Usuario user = new Usuario();
+            user = (Usuario) session.getAttribute("usuario");
+      	
+    
+            if (user != null && user.isLogado()) {%>
+                <%@include file="navbarLogado.jsp"%>
+          <%  } else {%>
+                <%@include file="navbar.jsp"%><%
+            }
+        %>
 
         <div class="conform">
         <h1>Ticket Enviado!</h1>

@@ -4,6 +4,7 @@
     Author     : Aluno
 --%>
 
+<%@page import="br.senai.model.Usuario"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@page import="br.senai.model.Tickets"%>
@@ -67,10 +68,30 @@
         }
     </style>
     <body>
-       <%@include file="navbar.jsp" %>
+        
+       <%//menu
+            Usuario user = new Usuario();
+            user = (Usuario) session.getAttribute("usuario");
+      	
+    
+            if (user != null && user.isLogado()) {%>
+            
+                <%@include file="navbarLogado.jsp"%>
+          <%  } else {%>
+                <%@include file="navbar.jsp"%><%
+            }
+        %>
        
+        
        <div> 
-           <a href="formsup.jsp"><img id="form" src="images/form.png"></a>
+            <%  if (user != null && user.isLogado()) {
+            
+              out.println("<a href='formsup.jsp'><img id='form' src='images/form.png'></a>");
+            } else {
+              out.println("<a href='login.jsp'><img id='form' src='images/form.png'></a>");
+            }
+        %>
+           
        </div>
         
        
@@ -83,18 +104,27 @@
                     }
                 %>
                 
+                
+                
             <div class="sessaoGeral">
                 <div class="sessaoTicket">
                     <h3>Seus Tickets</h3>   
                     
-                    <%if(lista.isEmpty()==true){
-                        out.print("Não há Tickets enviados por você!");}%>
+                   <%  if (user != null && user.isLogado() && lista.isEmpty()==true ) {
             
-                   <% for(Tickets t: lista){ %>
+              out.println("Você não tem tickets");
+              
+            } else if(user != null && user.isLogado() && lista.isEmpty()==false){
+              for(Tickets t: lista){ %>
                        
                     <div><b class='nTicket'><%=+ind+"° Ticket</b> | <b>Tipo de Pergunta:</b> "+t.getTipopergunta()+"<br> <b>Assunto:</b> "+t.getAssunto()%></div><br>
                 
-              <% ind++; } %>
+              <% ind++; } 
+            }else{
+       
+                    out.println("Você precisa estar logado!");
+               }%>
+                   
               </div>
               
               <div class="freqTickets">

@@ -4,6 +4,7 @@
     Author     : Aluno
 --%>
 
+<%@page import="br.senai.model.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -19,7 +20,17 @@
     <body>
        
        <!-- MENU -->
-       <%@include file="navbar.jsp" %>
+     <%
+            Usuario user = new Usuario();
+            user = (Usuario) session.getAttribute("usuario");
+      	
+    
+            if (user != null && user.isLogado()) {%>
+                <%@include file="navbarLogado.jsp"%>
+          <%  } else {%>
+                <%@include file="navbar.jsp"%><%
+            }
+        %>
      <!-- /MENU -->
      <br>
      <br>

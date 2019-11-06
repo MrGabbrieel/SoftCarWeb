@@ -54,7 +54,7 @@ public class LoginServlet extends HttpServlet {
                         session.setAttribute("usuario", u);
 
                       // mandar para homeLogado 
-                       request.getRequestDispatcher("/indexDpsDeLogar.jsp").forward(request, response);   
+                       request.getRequestDispatcher("/index.jsp").forward(request, response);   
                    }else{
                             out.println("<script type=\"text/javascript\">");
                             out.println("alert('Senha incorreta ou Softplayer não cadastrado !! ')");
