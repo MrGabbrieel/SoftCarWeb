@@ -55,7 +55,7 @@
         <div class="conform">
         <h1>Ticket Enviado!</h1>
         <div>
-            O seu Ticket sobre <b>${requestScope.t.tipopergunta}</b>, do assunto: <b>${requestScope.t.assunto}</b> foi enviado com sucesso aos nossos Administradores!</b>
+            O seu Ticket o assunto: <b>${sessionScope.tickets.assunto}</b> foi enviado com sucesso aos nossos Administradores!</b>
 
         </div>
             <div> <a href="suporte.jsp">Voltar ao suporte</a> </div>

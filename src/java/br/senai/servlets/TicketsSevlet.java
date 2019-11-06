@@ -61,21 +61,24 @@ public class TicketsSevlet extends HttpServlet {
                 request.setAttribute("msgErroTres", "Campo Mensagem é obrigatório !");
                 request.getRequestDispatcher("/formsup.jsp").forward(request, response);
                 return;
-            }
+            }else{
             //
       
                 // obj das suas devidas classes para mandar ao banco 
                 Tickets ticket = new Tickets(tipopergunta, assunto, mensagem);
                 TicketsDAO c = new TicketsDAO();
                 c.inserirTickets(ticket);
+                
+                //pega o tipo de assunto
+                      session.setAttribute("tickets", assunto);
                              
                 out.println("<script type=\"text/javascript\">");
                 out.println("alert(Seu Ticket foi enviado com sucesso! :) )");
-                out.println("location='/SA Web/index.jsp';");
+                out.println("location='/SA Web/resultInsercaoTickets.jsp';");
                 out.println("</script>");
-             
+                request.getRequestDispatcher("/resultInsercaoTickets.jsp").forward(request, response);
+            }
  
-            // end comparar senhas 
             
         }
      }
