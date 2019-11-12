@@ -8,6 +8,16 @@
           <link rel = "shortcut icon" type = "imagem/x-icon" href = "images/LogoSoft.png"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700|Roboto+Slab:400,700&display=swap"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+       
+        <script type="text/javascript">
+//           String email = request.getParameter("email");
+//          String senha = request.getParameter("senha");
+//           if(email != null && senha != null && !email.isEmpty() && !senha.isEmpty()){
+//               session.setAttribute("email", email);
+//           
+//               response.sendRedirect("login.jsp");
+//           }
+        </script>
     </head>
     <style>
             *{
@@ -151,13 +161,15 @@
     }
     </style>
     <body>
+        
     <div class="btn-voltar"><a href="index.jsp">&#8617;</a></div>
 
-    <form class="login-form" action="LoginServlet" method="post">
+    <form id="form" class="login-form" action="LoginServlet" method="post">
+       
         <h1>Boas-Vindas de volta!</h1>
 
         <div class="txtb">
-          <input type="text" name="email">
+          <input type="text" name="email" id="email">
           <span data-placeholder="E-mail" ></span>
         </div>
 
@@ -168,7 +180,7 @@
         <div class="txtFgtPsw"><a>Esqueceu sua senha?</a></div>
 
         <input type="submit" class="logbtn" name="ENVIAR" value="LOGAR">
-
+          <font color="red"><b>${requestScope.msgErro}</b></font>
         <div class="bottom-text">
           Não tem uma conta? <a href="cadastro.jsp">Quero me cadastrar</a>
         </div>
@@ -185,15 +197,9 @@
         if($(this).val() === "")
         $(this).removeClass("focus");
       });
-
+      
+         
       </script>
-    <% /*
-        String email = request.getParameter("email");
-          String senha = request.getParameter("senha");
-           if(email != null && senha != null && !email.isEmpty() && !senha.isEmpty()){
-               session.setAttribute("email", email);
-               response.sendRedirect("index.jsp");
-           }
-          */ %>
+    
      </body>
 </html>

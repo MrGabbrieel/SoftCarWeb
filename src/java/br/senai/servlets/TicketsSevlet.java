@@ -45,20 +45,21 @@ public class TicketsSevlet extends HttpServlet {
             String assunto = request.getParameter("assunto");
             String mensagem = request.getParameter("mensagem");
             // end pegando
-            
+            String msgerro = "";
             // comparar se tem algo vazio
             if(tipopergunta.isEmpty() || tipopergunta == null){
-                request.setAttribute("msgErroUm", "Campo Tipo de Pergunta obrigatório ou está invalido !");
-                request.getRequestDispatcher("/formsup.jsp").forward(request, response);
-                return;
+                msgerro += "| Tipo de Pergunta |";
+                
             }
-             else if(assunto.isEmpty() || assunto == null){
-                request.setAttribute("msgErroDois", "Campo Assunto é obrigatório !");
-                request.getRequestDispatcher("/formsup.jsp").forward(request, response);
-                return;
+            if(assunto.isEmpty() || assunto == null){
+              msgerro += "| Assunto |";
             }
-            else if(mensagem.isEmpty() || mensagem == null){
-                request.setAttribute("msgErroTres", "Campo Mensagem é obrigatório !");
+             if(mensagem.isEmpty() || mensagem == null){
+                msgerro += "| Mensagem |";
+            }
+            if(!msgerro.isEmpty()){
+                msgerro = "Campo(s) "+msgerro+" é/são obrigatório(s) !"; 
+                request.setAttribute("msgErro", msgerro);
                 request.getRequestDispatcher("/formsup.jsp").forward(request, response);
                 return;
             }else{
@@ -71,7 +72,8 @@ public class TicketsSevlet extends HttpServlet {
                 
                 //pega o tipo de assunto
                       session.setAttribute("tickets", assunto);
-                             
+                      request.setAttribute("tickets", assunto); 
+                      
                 out.println("<script type=\"text/javascript\">");
                 out.println("alert(Seu Ticket foi enviado com sucesso! :) )");
                 out.println("location='/SA Web/resultInsercaoTickets.jsp';");

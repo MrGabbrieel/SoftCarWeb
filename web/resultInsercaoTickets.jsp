@@ -1,5 +1,7 @@
 
-
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="br.senai.model.Tickets"%>
 <%@page import="br.senai.model.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -39,23 +41,24 @@
         }
     </style>
     <body>
-         
-      <%//menu
+         <%//menu
             Usuario user = new Usuario();
             user = (Usuario) session.getAttribute("usuario");
       	
     
             if (user != null && user.isLogado()) {%>
+            
                 <%@include file="navbarLogado.jsp"%>
           <%  } else {%>
                 <%@include file="navbar.jsp"%><%
             }
         %>
+  
 
         <div class="conform">
         <h1>Ticket Enviado!</h1>
         <div>
-            O seu Ticket o assunto: <b>${sessionScope.tickets.assunto}</b> foi enviado com sucesso aos nossos Administradores!</b>
+            O seu Ticket do assunto: <b>${requestScope.tickets}</b> foi enviado com sucesso aos nossos Administradores!</b>
 
         </div>
             <div> <a href="suporte.jsp">Voltar ao suporte</a> </div>

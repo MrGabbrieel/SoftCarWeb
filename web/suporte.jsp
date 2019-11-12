@@ -96,7 +96,7 @@
         
        
                <%! List<Tickets> lista = new ArrayList<Tickets>();%>
-               <% int ind =1; %>
+               <% int ind = 1; %>
                <% lista = (List<Tickets>)request.getSession().getAttribute("listaTickets");
                     if(lista==null){
                         lista = new ArrayList();      

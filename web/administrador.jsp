@@ -30,15 +30,22 @@
                 CadastroDAO cdDao = new CadastroDAO();
               
        
-                    for(Usuario i: cadlist){
+                    for(Usuario user: cadlist){
                          out.print("<tr>");
-                         out.print("<td>"+i.getCod_usuario()+"</td>");
-                         out.print("<td>"+i.getNomeUser()+"</td>");
-                         out.print("<td>"+i.getCpf()+"</td>");
-                         out.print("<td>"+i.getEmail()+"</td>");
-                         out.print("<td>"+i.getSenha()+"</td>");
-                        out.print("<td><a href='alterar.jsp?cod_cadastro="+i.getCod_usuario()+"&nome="+i.getNomeUser()+"&cpf="+i.getCpf()+"&email="+i.getEmail()+"&senha="+i.getSenha()+" '>CLIQUE</a></td>");
-                         out.print("<td><a href='excluir.jsp?cod_cadastro="+i.getCod_usuario()+"&nome="+i.getNomeUser()+"&email="+i.getEmail()+" '>CLIQUE</a></td>");
+                         out.print("<td>"+user.getCod_usuario()+"</td>");
+                         out.print("<td>"+user.getNomeUser()+"</td>");
+                         out.print("<td>"+user.getCpf()+"</td>");
+                         out.print("<td>"+user.getEmail()+"</td>");
+                         out.print("<td>"+user.getSenha()+"</td>");
+                        out.print("<td><a href='alterar.jsp?cod_cadastro="+user.getCod_usuario()+
+                                "&nome="+user.getNomeUser()+
+                                "&cpf="+user.getCpf()+
+                                "&email="+user.getEmail()+
+                                "&senha="+user.getSenha()+" '>CLIQUE</a></td>");
+                         out.print("<td><a href='excluir.jsp?cod_cadastro="+user.getCod_usuario()+
+                                 "&nome="+user.getNomeUser()+
+                                 "&email="+user.getEmail()+
+                                 " '>CLIQUE</a></td>");
                          out.print("</tr>");
                         
                     }   
