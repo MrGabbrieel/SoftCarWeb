@@ -8,7 +8,11 @@
 <html lang="pt-br">
     <head>
         <title>Resultado de Inserção</title>
-        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/colorsLightMode.css"/>
+        <link rel = "shortcut icon" type = "imagem/x-icon" href = "images/LogoSoft.png"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700|Roboto+Slab:400,700&display=swap"/>            
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>   
     </head>
     <style>
         *{
@@ -41,13 +45,12 @@
         }
     </style>
     <body>
-         <%//menu
+        <%//menu
             Usuario user = new Usuario();
             user = (Usuario) session.getAttribute("usuario");
       	
     
             if (user != null && user.isLogado()) {%>
-            
                 <%@include file="navbarLogado.jsp"%>
           <%  } else {%>
                 <%@include file="navbar.jsp"%><%
