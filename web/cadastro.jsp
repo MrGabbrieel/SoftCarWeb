@@ -35,7 +35,7 @@
     .login-form{
       margin-top: 8%;
       width: 430px;
-      height: 670px;
+      height: 680px;
       background: #ffffff;
       padding: 45px 50px;
       border-radius: 20px;
@@ -44,7 +44,6 @@
       top: 40%;
       transform: translate(-50%,-50%);
     }
-
     .login-form h1{
       color: black;
       font-family: 'Roboto Slab',sans-serif;
@@ -160,7 +159,13 @@
         width: 200px;
         margin-left: 24%;
         margin-top: 37%;
-    }   
+    }
+    .erro{
+        color: red;
+        font-family: 'Roboto', sans-serif;
+        font-size: 10pt;
+        margin-top: -40px;
+    }
     @media(max-width :800px){
     .login-form{left: 50%}
     }   
@@ -180,7 +185,7 @@
          <form action="CadastroServlet" method="post" class="login-form">
              
         <h1>É novo(a) por aqui?</h1>
-         <font color="red"><b>${requestScope.msgErro}</b></font>
+         <p class="erro"><b>${requestScope.msgErro}</b></p>
         <!-- Nome - CPF  - Email - Senha - Confirmar Senha -->
         <div class="txtb">
           <input type="text" name="nome">
