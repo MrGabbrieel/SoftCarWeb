@@ -54,7 +54,9 @@
 
                <ul class="espaço-cadastro">
                       <li class=""><a class="aNav" id="" >Bem-Vindo, ${sessionScope.usuario.nomeUser}</a>
+                          <form id="form1"  action="LoginServlet" method="post">
                       <li><input type="button" class="logbtn" name="SAINDO" value="SAIR"></li>
+                          </form>
                 </ul>
             </div>
             

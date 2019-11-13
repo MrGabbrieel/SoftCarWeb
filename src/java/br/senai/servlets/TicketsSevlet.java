@@ -45,8 +45,9 @@ public class TicketsSevlet extends HttpServlet {
             String assunto = request.getParameter("assunto");
             String mensagem = request.getParameter("mensagem");
             // end pegando
-            String msgerro = "";
+           
             // comparar se tem algo vazio
+             String msgerro = "";
             if(tipopergunta.isEmpty() || tipopergunta == null){
                 msgerro += "| Tipo de Pergunta |";
                 

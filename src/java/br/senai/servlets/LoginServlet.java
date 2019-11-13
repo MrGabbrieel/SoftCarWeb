@@ -24,9 +24,16 @@ public class LoginServlet extends HttpServlet {
             throws ServletException, IOException {
 
         String envio = request.getParameter("ENVIAR");
+        
         switch (envio) {
             case "LOGAR":
                 this.verificacao(request, response);
+        }
+        
+        String saida = request.getParameter("SAINDO");
+         switch (saida) {
+            case "SAIR":
+                this.SAI(request, response);
         }
     }
 
@@ -60,8 +67,8 @@ public class LoginServlet extends HttpServlet {
 
                     // mandar para homeLogado 
                     request.getRequestDispatcher("/index.jsp").forward(request, response);
-                } else {
-                    out.println("<script type=\"text/javascript\">");
+                } else{
+                    out.println("<script type='text/javascript'>");
                     out.println("alert('Senha incorreta ou Softplayer não cadastrado !! ')");
                     out.println("location='/SA Web/login.jsp';");
                     out.println("</script>");
@@ -73,6 +80,17 @@ public class LoginServlet extends HttpServlet {
         }
     }
 
+     private void SAI(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        try (PrintWriter out = response.getWriter()) {
+            // Session
+            HttpSession session = request.getSession();
+            request.getRequestDispatcher("index.html").include(request, response);
+            session.invalidate();
+            out.print("Blz, vc Saiu!");
+            out.close();
+        }
+    }
+     
     @Override
     public String getServletInfo() {
         return "Short description";

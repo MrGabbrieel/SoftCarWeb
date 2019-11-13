@@ -180,6 +180,7 @@
          <form action="CadastroServlet" method="post" class="login-form">
              
         <h1>É novo(a) por aqui?</h1>
+         <font color="red"><b>${requestScope.msgErro}</b></font>
         <!-- Nome - CPF  - Email - Senha - Confirmar Senha -->
         <div class="txtb">
           <input type="text" name="nome">
@@ -213,7 +214,7 @@
         <div class="bottom-text">
           Já tem uma conta? <a href="login.jsp">Faça o Login aqui</a>
         </div>
-
+         
       </form>
            <div><a class="logosixth"> <img src="images/sixthcubelogo.png"/></a></div>
 
