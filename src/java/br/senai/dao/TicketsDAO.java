@@ -40,7 +40,7 @@ public class TicketsDAO {
     
     public List<Tickets> getTickets(int idUser) {
         try {
-            String sql = "SELECT tipopergunta, assunto from tickets WHERE cod_user = '"+idUser+"'";
+            String sql = "SELECT tipopergunta, assunto from tickets WHERE cod_user = '"+idUser+"' ORDER BY tickets.cod_ticket DESC";
             PreparedStatement ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery(sql);
             
