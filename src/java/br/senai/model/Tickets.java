@@ -7,14 +7,16 @@ public class Tickets {
     private String tipopergunta;
     private String assunto;
     private String mensagem;
+    private int cod_user;
 
     public Tickets() {
     }
 
-    public Tickets(String tipopergunta, String assunto, String mensagem) {
+    public Tickets(String tipopergunta, String assunto, String mensagem, int cod_user) {
         this.tipopergunta = tipopergunta;
         this.assunto = assunto;
         this.mensagem = mensagem;
+        this.cod_user = cod_user;
     }
 
     public String getTipopergunta() {
@@ -51,5 +53,13 @@ public class Tickets {
      @Override
     public String toString() {
         return "Ticket" + "id=" + cod_ticket + ", tipopergunta=" + tipopergunta + '}';
+    }
+
+    public int getCod_user() {
+        return cod_user;
+    }
+
+    public void setCod_user(int cod_user) {
+        this.cod_user = cod_user;
     }
 }

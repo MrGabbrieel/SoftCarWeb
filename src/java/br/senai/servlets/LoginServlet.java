@@ -64,6 +64,7 @@ public class LoginServlet extends HttpServlet {
                 if (u.isLogado()) {
                     // Mandar usuario para session 
                     session.setAttribute("usuario", u);
+                    session.setAttribute("cod_user", u.getCod_usuario());
 
                     // mandar para homeLogado 
                     request.getRequestDispatcher("/index.jsp").forward(request, response);

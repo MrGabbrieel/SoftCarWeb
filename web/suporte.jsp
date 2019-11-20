@@ -67,7 +67,7 @@
             font-weight: bold;
         }
     </style>
-    <body>
+    
         
        <%//menu
             Usuario user = new Usuario();
@@ -95,7 +95,7 @@
        </div>
         
        
-               <%! List<Tickets> lista = new ArrayList<Tickets>();%>
+               <%!List<Tickets> lista = new ArrayList<Tickets>();%>
                <% int ind = 1; %>
                <% lista = (List<Tickets>)request.getSession().getAttribute("listaTickets");
                     if(lista==null){
@@ -132,5 +132,5 @@
                   <img src="images/ticketFreq.png">
               </div>
             </div>
-    </body>
+    
 </html>

@@ -31,7 +31,7 @@ public class LoginDAO {
         Usuario usuario = null;
         if(rs.next()){
         usuario = new Usuario(rs.getInt("cod_usuario"), rs.getString("nome"), true);
-         
+        
         }
               
        
