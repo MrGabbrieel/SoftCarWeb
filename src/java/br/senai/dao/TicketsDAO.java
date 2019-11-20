@@ -3,12 +3,17 @@ package br.senai.dao;
 import br.senai.model.Tickets;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TicketsDAO {
 
     Connection con;
-
+    private List<Tickets> list = new ArrayList();
+    private Tickets tt;
+    
     public TicketsDAO() {
         con = ConnectionFactory.getConexao();
     }
@@ -31,5 +36,31 @@ public class TicketsDAO {
             return false;
         }
         return true;
+    }
+    
+    public List<Tickets> getTickets(int idUser) {
+        try {
+            String sql = "SELECT tipopergunta, assunto from tickets WHERE cod_user = '"+idUser+"'";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery(sql);
+            
+            while(rs.next()){
+                tt = new Tickets();
+                
+                tt.setAssunto(rs.getString("assunto"));
+                tt.setTipopergunta(rs.getString("tipopergunta"));
+                
+                list.add(tt);
+                
+            }
+            
+            rs.close();
+            ps.close();
+            con.close();
+
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+        return list;
     }
 }

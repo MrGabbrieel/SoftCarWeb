@@ -30,11 +30,6 @@ public class LoginServlet extends HttpServlet {
                 this.verificacao(request, response);
         }
         
-        String saida = request.getParameter("SAINDO");
-         switch (saida) {
-            case "SAIR":
-                this.SAI(request, response);
-        }
     }
 
     private void verificacao(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -81,16 +76,7 @@ public class LoginServlet extends HttpServlet {
         }
     }
 
-     private void SAI(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try (PrintWriter out = response.getWriter()) {
-            // Session
-            HttpSession session = request.getSession();
-            request.getRequestDispatcher("index.html").include(request, response);
-            session.invalidate();
-            out.print("Blz, vc Saiu!");
-            out.close();
-        }
-    }
+//    
      
     @Override
     public String getServletInfo() {

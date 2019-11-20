@@ -9,6 +9,8 @@ import br.senai.dao.TicketsDAO;
 import br.senai.model.Tickets;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,7 +23,10 @@ public class TicketsSevlet extends HttpServlet {
 @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
+       String envio = request.getParameter("ENVIAR");
+        switch(envio){
+            case "ENVIAR": this.getTicket(request, response);
+        }
     }
 
     @Override
@@ -86,10 +91,31 @@ public class TicketsSevlet extends HttpServlet {
             
         }
      }
-    
+     private void getTicket(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+          try (PrintWriter out = response.getWriter()) {
+              //Session
+              HttpSession session = request.getSession();
+              //
+              // cod do user logado
+              int cod_user = (int) session.getAttribute("cod_user");
+              //
+              
+              // dar select nos tickets
+                TicketsDAO ttDAO = new TicketsDAO();
+                // lista os tickets 
+                List<Tickets> ttList = new ArrayList();
+                //
+                ttList = ttDAO.getTickets(cod_user);
+                request.setAttribute("listaTickets", ttList);
+                request.getRequestDispatcher("suporte.jsp").forward(request, response);
+              //    
+        }
+    }
     @Override
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    
 
 }

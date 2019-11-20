@@ -45,17 +45,7 @@
         }
     </style>
     <body>
-        <%//menu
-            Usuario user = new Usuario();
-            user = (Usuario) session.getAttribute("usuario");
-      	
-    
-            if (user != null && user.isLogado()) {%>
-                <%@include file="navbarLogado.jsp"%>
-          <%  } else {%>
-                <%@include file="navbar.jsp"%><%
-            }
-        %>
+        
   
 
         <div class="conform">
@@ -64,7 +54,7 @@
             O seu Ticket do assunto: <b>${requestScope.tickets}</b> foi enviado com sucesso aos nossos Administradores!</b>
 
         </div>
-            <div> <a href="suporte.jsp">Voltar ao suporte</a> </div>
+            <div> <a href="TicketsSevlet?ENVIAR=ENVIAR">Voltar ao suporte</a> </div>
         </div>  
     </body>
 </html>
