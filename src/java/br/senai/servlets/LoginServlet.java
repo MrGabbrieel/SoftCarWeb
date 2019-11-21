@@ -16,6 +16,11 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+         String envio = request.getParameter("Deslogar");
+        switch (envio) {
+            case "Sair":
+                this.deslogar(request, response);
+        }
 
     }
 
@@ -73,6 +78,14 @@ public class LoginServlet extends HttpServlet {
             } catch (SQLException ex) {
                 System.out.println(ex);
             }
+        }
+    }
+    private void deslogar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        try (PrintWriter out = response.getWriter()) {
+            // Session 
+            HttpSession session = request.getSession();
+            session.invalidate();
+            request.getRequestDispatcher("login.jsp").forward(request, response);
         }
     }
 

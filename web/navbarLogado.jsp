@@ -290,7 +290,7 @@
                <ul class="espaço-cadastro">
                       <li class=""><a class="aNav" id="" >Bem-Vindo, ${sessionScope.usuario.nomeUser}</a>
                           
-                      <li><input href="LogoutServlet" type="button" class="logbtn" name="SAINDO" value="SAIR"></li>
+                      <li><input href="Login?Deslogar=Sair" type="button" class="logbtn"></li>
                           </form
                 </ul>
             </div>
