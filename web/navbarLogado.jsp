@@ -288,11 +288,10 @@
                 </ul>
 
                <ul class="espaço-cadastro">
-                      <li class=""><a class="aNav" id="" >Bem-Vindo, ${sessionScope.usuario.nomeUser}</a>
-                          
-                      <li><input href="Login?Deslogar=Sair" type="button" class="logbtn"></li>
-                          </form
+                      <li class=""><a class="aNav" id="" >Bem-Vindo, ${sessionScope.usuario.nomeUser} </a>
+                      <li class=""><a href="LoginServlet?Deslogar=Sair" class="aNav" id="" >  <b>|  Sair  |</b>  </a>       
                 </ul>
+                        
             </div>
             
         </div>
