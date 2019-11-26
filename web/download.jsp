@@ -19,19 +19,21 @@
     </head>
     <body>
        
-       <!-- MENU -->
-     <%
+      <%//menu
             Usuario user = new Usuario();
             user = (Usuario) session.getAttribute("usuario");
-      	
-    
-            if (user != null && user.isLogado()) {%>
-                <%@include file="navbarLogado.jsp"%>
-          <%  } else {%>
-                <%@include file="navbar.jsp"%><%
+
+    if (user != null && user.isLogado()) {
+        if(user.getCod_usuario() == 8){%>
+        <%@include file="navbarLogadoADM.jsp"%>
+        
+        <%  } else {%>
+        <%@include file="navbarLogado.jsp"%>
+        <% } %>
+        <% } else{ %>
+        <%@include file="navbar.jsp"%><%
             }
         %>
-     <!-- /MENU -->
      <br>
      <br>
      <br>

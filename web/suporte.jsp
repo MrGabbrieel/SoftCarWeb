@@ -53,11 +53,11 @@
         .nTicket{
             color: #145899;
         }
-        
+
         .escrolar{
             height: 350px;
             overflow-y: scroll;
-            
+
         }
         .freqTickets{
             margin-top: 2.5%;
@@ -313,25 +313,24 @@
         Usuario user = new Usuario();
         user = (Usuario) session.getAttribute("usuario");
 
-        if (user != null && user.isLogado()) {%>
+        if (user != null && user.isLogado()) {
+           if (user.getCod_usuario() == 8) {%>
+    <%@include file="navbarLogadoADM.jsp"%>
 
+    <% out.println("<a href='formsup.jsp'><img id='form' src='images/form.png'></a>");
+        } else {%>
     <%@include file="navbarLogado.jsp"%>
-    <%  } else {%>
+    <%out.println("<a href='formsup.jsp'><img id='form' src='images/form.png'></a>");%>
+    <% } %>
+    <% } else { %>
     <%@include file="navbar.jsp"%><%
+
+            out.println("<a href='login.jsp'><img id='form' src='images/form.png'></a>");
         }
     %>
 
 
-    <div> 
-        <%  if (user != null && user.isLogado()) {
 
-                out.println("<a href='formsup.jsp'><img id='form' src='images/form.png'></a>");
-            } else {
-                out.println("<a href='login.jsp'><img id='form' src='images/form.png'></a>");
-            }
-        %>
-
-    </div>
 
 
     <%!List<Tickets> lista = new ArrayList();%>
@@ -354,19 +353,19 @@
                     out.println("Você não tem tickets");
 
                 } else if (user != null && user.isLogado() && lista != null && !lista.isEmpty()) {
-                     out.println("<div class='escrolar'>");
-                   for (Tickets t : lista) {
-                           
-                            out.println("<div class='dale'>");
-                                out.println("<p class='nTicket'> "+ind+"º Ticket: ");
-                                out.println("</p>");
-                                out.println("<p class='tp'> <b>Tipo pergunta:</b> "+t.getTipopergunta()+"");
-                                out.println("</p>");
-                                out.println("<p class='assunto'> <b>Assunto:</b> "+t.getAssunto()+"");
-                                out.println("</p>");
-                                out.println("</br>");
-                            out.println("</div>");
-                            
+                    out.println("<div class='escrolar'>");
+                    for (Tickets t : lista) {
+
+                        out.println("<div class='dale'>");
+                        out.println("<p class='nTicket'> " + ind + "º Ticket: ");
+                        out.println("</p>");
+                        out.println("<p class='tp'> <b>Tipo pergunta:</b> " + t.getTipopergunta() + "");
+                        out.println("</p>");
+                        out.println("<p class='assunto'> <b>Assunto:</b> " + t.getAssunto() + "");
+                        out.println("</p>");
+                        out.println("</br>");
+                        out.println("</div>");
+
                         ind++;
                     }
                     out.println("</div>");
