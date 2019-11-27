@@ -13,6 +13,7 @@ public class TicketsDAO {
     Connection con;
     private List<Tickets> list = new ArrayList();
     private Tickets tt;
+    private List<Tickets> lista = new ArrayList();
     
     public TicketsDAO() {
         con = ConnectionFactory.getConexao();
@@ -26,6 +27,7 @@ public class TicketsDAO {
             ps.setString(2, t.getAssunto());
             ps.setString(3, t.getMensagem());
             ps.setInt(4, t.getCod_user());
+
             
             ps.executeUpdate();
             ps.close();
@@ -63,4 +65,35 @@ public class TicketsDAO {
         }
         return list;
     }
+    
+    public List<Tickets> admList(){
+             try {
+            String sql = "SELECT * from tickets ORDER BY tickets.cod_ticket ASC";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery(sql);
+            
+            while(rs.next()){
+                tt = new Tickets();
+                
+                tt.setAssunto(rs.getString("assunto"));
+                tt.setTipopergunta(rs.getString("tipopergunta"));
+                tt.setMensagem(rs.getString("mensagem"));
+                tt.setResposta(rs.getString("resposta"));
+                
+                lista.add(tt);
+                
+            }
+            
+            rs.close();
+            ps.close();
+            con.close();
+
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+        return lista;
+    }
+        
+        
+    
 }

@@ -50,6 +50,7 @@ public class TicketsSevlet extends HttpServlet {
             String assunto = request.getParameter("assunto");
             String mensagem = request.getParameter("mensagem");
             int cod_user = (int) session.getAttribute("cod_user");
+            String msgpadrao = "Aguardndo Resposta";
             // end pegando
            
             // comparar se tem algo vazio
@@ -73,7 +74,7 @@ public class TicketsSevlet extends HttpServlet {
             //
       
                 // obj das suas devidas classes para mandar ao banco 
-                Tickets ticket = new Tickets(tipopergunta, assunto, mensagem, cod_user);
+                Tickets ticket = new Tickets(tipopergunta, assunto, mensagem, cod_user, msgpadrao);
                 TicketsDAO c = new TicketsDAO();
                 c.inserirTickets(ticket);
                 

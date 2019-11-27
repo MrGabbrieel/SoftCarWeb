@@ -8,15 +8,17 @@ public class Tickets {
     private String assunto;
     private String mensagem;
     private int cod_user;
+    private String resposta;
 
     public Tickets() {
     }
 
-    public Tickets(String tipopergunta, String assunto, String mensagem, int cod_user) {
+    public Tickets(String tipopergunta, String assunto, String mensagem, int cod_user, String resposta) {
         this.tipopergunta = tipopergunta;
         this.assunto = assunto;
         this.mensagem = mensagem;
         this.cod_user = cod_user;
+        this.resposta = resposta;
     }
 
     public String getTipopergunta() {
@@ -62,4 +64,13 @@ public class Tickets {
     public void setCod_user(int cod_user) {
         this.cod_user = cod_user;
     }
+
+    public String getResposta() {
+        return resposta;
+    }
+
+    public void setResposta(String resposta) {
+        this.resposta = resposta;
+    }
+
 }
