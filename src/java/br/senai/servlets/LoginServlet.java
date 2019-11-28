@@ -44,8 +44,10 @@ public class LoginServlet extends HttpServlet {
                 HttpSession session = request.getSession();
                 //
                 // pegar dados da pagina 
+                String nomeUser = request.getParameter("nomeUser");
                 String email = request.getParameter("email");
                 String senhaLogin = request.getParameter("senha");
+            
                 //
 
                 //compara se os campos estão vazios
@@ -57,14 +59,23 @@ public class LoginServlet extends HttpServlet {
 
                 // mandar para o banco de dados 
                 Usuario user = new Usuario(email, senhaLogin);
+              
                 LoginDAO l = new LoginDAO();
                 Usuario u = l.logar(user);
+                
+                
 
                 //loga
                 if (u.isLogado()) {
                     // Mandar usuario para session 
                     session.setAttribute("usuario", u);
+                      session.setAttribute("cpf", u.getCpf());
                     session.setAttribute("cod_user", u.getCod_usuario());
+                    
+                    
+                    
+                   
+                
 
                     // mandar para homeLogado 
                     request.getRequestDispatcher("/index.jsp").forward(request, response);

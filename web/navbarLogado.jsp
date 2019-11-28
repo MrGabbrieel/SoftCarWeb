@@ -283,7 +283,7 @@
                 <ul class="espaço-itens">
                     <li><a href="download.jsp">Download Mobile</a></li> 
                     <li><a href="TicketsSevlet?ENVIAR=ENVIAR">Suporte</a></li>
-                    <li><a href="#">Minha Conta</a></li>
+                    <li><a href="minhaConta.jsp">Minha Conta</a></li>
                   
                 </ul>
 

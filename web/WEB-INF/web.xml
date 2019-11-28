@@ -28,6 +28,10 @@
         <servlet-name>AdminServlet</servlet-name>
         <servlet-class>br.senai.servlets.AdminServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PerfilSevlet</servlet-name>
+        <servlet-class>br.senai.servlets.PerfilSevlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Logar</servlet-name>
         <url-pattern>/Logar</url-pattern>
@@ -51,6 +55,10 @@
     <servlet-mapping>
         <servlet-name>AdminServlet</servlet-name>
         <url-pattern>/AdminServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PerfilSevlet</servlet-name>
+        <url-pattern>/PerfilSevlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

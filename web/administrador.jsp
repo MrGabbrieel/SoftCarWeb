@@ -14,7 +14,7 @@
     <body>
            <%!List<Tickets> lista = new ArrayList();%>
     <% int ind = 1; %>
-    <% lista = (List) request.getAttribute("listaTicketsadm");
+    <% lista = (List) request.getAttribute("listaTicketsADM");
         if (lista == null) {
             lista = new ArrayList();
 

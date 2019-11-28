@@ -78,11 +78,15 @@ public class CadastroServlet extends HttpServlet {
                     // obj das suas devidas classes para mandar ao banco 
                     Usuario user = new Usuario(email, senha, nomeUser, cpf);
                     Usuario soNome = new Usuario(nomeUser);
+                    
                     CadastroDAO c = new CadastroDAO();
                     c.inserirUser(user);
                     //
                     //mandar para session o nome de user 
                     session.setAttribute("usuario", soNome);
+                    
+                    
+                   
                     //
                     // aviso se foi realizado ou nao com sucesss
                     out.println("<script type=\"text/javascript\">");

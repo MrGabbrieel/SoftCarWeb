@@ -11,7 +11,9 @@ public class Usuario {
     private String email;
     private String senha;
     private String nomeUser;
-//login
+     private String idade;
+    private String telefone;
+    private String cargo;
     private boolean logado;
     
 
@@ -29,7 +31,7 @@ public class Usuario {
         this.nomeUser = nomeUser;
     }
     //
-    // para perfil
+    
 
     //login
 
@@ -43,6 +45,28 @@ public class Usuario {
     public Usuario(String email, String senha) {
         this.email = email;
         this.senha = senha;
+    }
+// pro perfil
+    public Usuario(int cod_usuario, String senha, String nomeUser, String email, String cpf, String idade, String telefone, String cargo) {
+       this.cod_usuario = cod_usuario;
+        this.cpf = cpf;
+        this.email = email;
+        this.senha = senha;
+        this.nomeUser = nomeUser;
+        this.idade = idade;
+        this.telefone = telefone;
+        this.cargo = cargo;
+      
+    }
+     public Usuario(String senha, String nomeUser, String email, String cpf, String idade, String telefone, String cargo) {
+        this.cpf = cpf;
+        this.email = email;
+        this.senha = senha;
+        this.nomeUser = nomeUser;
+        this.idade = idade;
+        this.telefone = telefone;
+        this.cargo = cargo;
+      
     }
 
     
@@ -95,6 +119,30 @@ public class Usuario {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+    
+    public String getIdade() {
+        return idade;
+    }
+
+    public void setIdade(String idade) {
+        this.idade = idade;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
     }
 
     @Override

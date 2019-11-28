@@ -180,7 +180,7 @@
             </div>
 
             <div class="txtb">
-                <input type="password" name="senha">
+                <input type="password" name="senha" id="senha">
                 <span data-placeholder="Senha" ></span>
             </div>
             <div class="txtFgtPsw"><a>Esqueceu sua senha?</a></div>

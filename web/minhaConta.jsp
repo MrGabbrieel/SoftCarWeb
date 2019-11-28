@@ -1,0 +1,274 @@
+<%-- 
+    Document   : minhaConta
+    Created on : 27/11/2019, 15:48:00
+    Author     : Aluno
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <title>Softcar Minha Conta</title>
+    <script src="https://kit.fontawesome.com/542c00a3b0.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700|Roboto+Slab:400,700&display=swap"/>
+    <script>
+        
+       function editar(Campo){
+              var h2, input, text;
+              
+              if(Campo == 'nome'){
+                  h2 = document.getElementById('nomeUser');
+              }else if(Campo == 'cpf'){
+                  h2 = document.getElementById('cpf');
+              }else if(Campo == 'email'){
+                  h2 = document.getElementById('email');
+              }else if(Campo == 'cargo'){
+                  h2 = document.getElementById('cargo');
+              }else if(Campo == 'idade'){
+                  h2 = document.getElementById('idade');
+              }else if(Campo == 'telefone'){
+                  h2 = document.getElementById('telefone');
+              }
+              
+              text = h2.innerHTML;
+              
+              h2.style.display = 'none';
+              
+              input = document.createElement('input');
+              input.type = 'text';
+              input.value = text;
+              input.id = 'input';
+              input.size = Math.max(text.length / 4 * 3, 4);
+              h2.parentNode.insertBefore(input, h2);
+              
+              var enter = document.getElementById('input');
+                enter.onkeyup = function(e){
+                    if(e.keyCode == 13){
+                        // Removendo o input
+                        h2.parentNode.removeChild(input);
+
+                        // Update no texto
+                        h2.innerHTML = input.value;
+                        
+                        // Mostrando o texto dnv
+                        h2.style.display = "";
+                    }   
+                }
+                input.onblur = function() {
+                  // Removendo o input
+                  h2.parentNode.removeChild(input);
+
+                  // Update no texto
+                  h2.innerHTML = input.value;
+
+                  // Mostrando o texto dnv
+                  h2.style.display = "";
+                };
+            }
+        </script>
+    </head>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(images/fundo-azul.png);
+    background-size: cover;
+}
+ #input{
+                height: 30px;
+                padding: 0 8px;
+                border: 1px solid #ddd;
+                border-color: #069;
+                border-radius: 12px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                outline: 0;
+                margin-top: 10px;
+                padding-inline-start: 10px;   
+            }
+.account-form{
+    width: 81%;
+    height: 110%;
+    background: #ffffff;
+    padding: 45px 50px;
+    border-radius: 20px;
+    position: relative;
+    left: 10%;
+    margin-top: 5%;
+}
+.sessao1{
+    align-items: center;
+    font-family: 'Roboto Slab',sans-serif;
+    display: flex;
+}
+/* #fotopf{
+    width: 200px;
+    border-radius: 50%;
+    margin-top: -70px;
+    margin-left: 400px;
+} */
+.sessao2{
+    font-family: 'Roboto',sans-serif;
+    font-size: 11pt;
+    font-weight: bold;
+    margin-top: 40px;
+}
+.sessao2 h2{
+    color: #145899;
+    padding-bottom: 15px
+   
+}
+.divisoria{
+    width: 100%;
+    background: #cccccc;
+    height: 1px;
+    margin-bottom: 5px;
+}
+i{
+    margin-left: 90%;
+    color: #145899;
+    font-size: 12pt;
+    position: absolute;
+    margin-top: -30px;
+    cursor: pointer;
+}
+.btn{
+    font-family: 'Roboto', sans-serif;
+    display: none;
+}
+#blah{
+    width: 200px;
+    border-radius: 50%;
+    margin-top: -70px;
+    margin-left: 400px;
+}
+.sessao1 input{
+     display: none;
+}
+label i{
+    cursor: pointer;
+    color: #ffffff;
+    position: absolute;
+    font-size: 23pt;
+    top: 46px;
+    left: -41px;
+}
+label{
+    cursor: pointer;
+    width: 50pt;
+    height: 50pt;
+    background: #145899;
+    border-radius: 50%;
+    position: relative;
+    right: 63px;
+    top: 40px;
+}
+.btn-voltar{
+  color: #145899;
+  font-family: 'Arial';
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  padding-top: 5px;
+  margin-left: 50px;
+  margin-top: 40px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  cursor: pointer;
+  position: absolute;
+  font-size: 15pt;
+}
+.del-save{
+    margin-top: 70px;
+    margin-bottom: 10px;
+}
+.del-save button{
+    font-family: 'Roboto Slab',sans-serif;
+    font-size: 13pt;
+    border-radius: 15px;
+    padding: 10px;
+    border: #145899 2px solid;
+    color: #145899;
+    background: none;
+}    
+#bt_delete:hover{
+    border: red 3px solid;
+    color: red;
+    font-weight: bold;
+}
+#bt_save:hover{
+    border: #0fb81d 3px solid;
+    color: #0fb81d;
+    font-weight: bold;
+}
+</style>
+    <body>
+      <div class="btn-voltar"><a href="index.jsp">&#8617;</a></div> <!--BOTÃO VOLTAR-->
+      <form class="account-form" action="PerfilSevlet" method="post">
+
+        <div class="sessao1">                <!-- SESSÃO 1: Foto de Perfil-->
+            <img id="blah" src="images/userlogo.jpg" />
+            <input type='file' id="imgInp"/>
+            <label for="imgInp"> <i class="fas fa-camera"></i> </label>
+        </div>                               <!--//SESSÃO 1-->
+
+        <div class="sessao2">                <!-- SESSÃO 2: Informações pessoais-->
+            Seu Nome: <h2 id="nomeUser" type="text">${sessionScope.usuario.nomeUser}</h2>  <i type="button" value="nomeUser" onclick="editar('nome')" class="fas fa-edit"></i>
+
+                <div class="divisoria"></div>
+
+            CPF: <h2 id="cpf" type="text"  >${sessionScope.usuario.cpf}</h2>   <i type="button" value="cpf" onclick="editar('cpf')" class="fas fa-edit"></i>
+
+                <div class="divisoria"></div>
+
+            E-mail: <h2 id="email" type="text" >${sessionScope.usuario.email}</h2>   <i type="button" value="email" onclick="editar('email')" class="fas fa-edit"></i>
+
+                <div class="divisoria"></div>
+
+            Cargo: <h2 id="cargo" type="text">${sessionScope.usuario.cargo}</h2>   <i type="button" value="cargo" onclick="editar('cargo')" class="fas fa-edit"></i>
+
+            <div class="divisoria"></div>
+
+            Idade: <h2 id="idade" type="text">24</h2>  <i type="button" value="idade" onclick="editar('idade')" class="fas fa-edit"></i>
+
+            <div class="divisoria"></div>
+
+            Telefone: <h2 id="telefone" type="text">+55 (48) 99613-4973</h2>   <i type="button" value="telefone" onclick="editar('telefone')" class="fas fa-edit"></i>
+
+            <div class="divisoria"></div>
+
+        Sua senha: <h2 id="senha" type="text" >********</h2>   <i type="button" value="senha" onclick="editar('senha')" class="fas fa-edit"></i>
+        </div>                               <!--//SESSÃO 2-->
+        
+        <div class="del-save">
+            <button id="bt_delete">DELETAR PERFIL</button>   <input type="submit" name="SALVA" value="SALVAR" id="bt_save">
+            </div>
+
+    </form>
+
+</body>
+<script>
+    
+     
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $('#blah').attr('src', e.target.result);
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $("#imgInp").change(function(){
+        readURL(this);
+    });
+    </script>
+</html>
