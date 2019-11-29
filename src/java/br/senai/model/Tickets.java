@@ -9,10 +9,13 @@ public class Tickets {
     private String mensagem;
     private int cod_user;
     private String resposta;
+    private String nomeUser;
+
 
     public Tickets() {
     }
 
+    //envia ticket
     public Tickets(String tipopergunta, String assunto, String mensagem, int cod_user, String resposta) {
         this.tipopergunta = tipopergunta;
         this.assunto = assunto;
@@ -20,6 +23,17 @@ public class Tickets {
         this.cod_user = cod_user;
         this.resposta = resposta;
     }
+    //recebe ticket
+    public Tickets(int cod_ticket, String tipopergunta, String assunto, String mensagem, int cod_user, String resposta, String nomeUser) {
+        this.cod_ticket = cod_ticket;
+        this.tipopergunta = tipopergunta;
+        this.assunto = assunto;
+        this.mensagem = mensagem;
+        this.cod_user = cod_user;
+        this.resposta = resposta;
+        this.nomeUser = nomeUser;
+    }
+    
 
     public String getTipopergunta() {
         return tipopergunta;
@@ -73,4 +87,13 @@ public class Tickets {
         this.resposta = resposta;
     }
 
+        public String getNomeUser() {
+        return nomeUser;
+    }
+
+    public void setNomeUser(String nomeUser) {
+        this.nomeUser = nomeUser;
+    }
+
+    
 }

@@ -26,21 +26,22 @@
                     for (Tickets t : lista) {
 
                         out.println("<div class='dale1'>");
-                        out.println("<p class='nTicket'> " + ind + "º Ticket: ");
+                        out.println("<p class='nTicket'> " +t.getCod_ticket()+ " Código do Ticket");
                         out.println("</p>");
                         out.println("<p class='tp'> <b>Tipo pergunta:</b> " + t.getTipopergunta() + "");
                         out.println("</p>");
                         out.println("<p class='assunto'> <b>Assunto:</b> " + t.getAssunto() + "");
                         out.println("</p>");
-                        out.println("</br>");
+          
                         out.println("<p class='assunto'> <b>Mensagem:</b> " + t.getMensagem() + "");
                         out.println("</p>");
-                        out.println("</br>");
+         
                         out.println("<p class='assunto'> <b>Resposta:</b> " + t.getResposta() + "");
                         out.println("</p>");
-                        out.println("</br>");
-                        out.println("<p class='assunto'> <b>Código do Ticket</b> " + t.getCod_ticket()+ "");
+               
+                        out.println("<p class='assunto'> <b>Usuário:</b> " + t.getNomeUser()+ "");
                         out.println("</p>");
+                        out.println("</br>");
                         out.println("</div>");
 
                         ind++;

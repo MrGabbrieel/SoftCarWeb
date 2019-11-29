@@ -284,7 +284,7 @@
                     <li><a href="download.jsp">Download Mobile</a></li> 
                     <li><a href="TicketsSevlet?ENVIAR=ENVIAR">Suporte</a></li>
                     <li><a href="minhaConta.jsp">Minha Conta</a></li>
-                    <li><a href="administrador.jsp">Administrador</a></li>
+                    <li><a href="AdminServlet?ENVIAR=ENVIAR">Administrador</a></li>
                   
                 </ul>
 

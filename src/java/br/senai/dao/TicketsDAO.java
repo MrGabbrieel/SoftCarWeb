@@ -68,17 +68,19 @@ public class TicketsDAO {
     
     public List<Tickets> admList(){
              try {
-            String sql = "SELECT * from tickets ORDER BY tickets.cod_ticket ASC";
+            String sql = "SELECT tickets.cod_ticket, tickets.tipopergunta, tickets.assunto, tickets.mensagem, tickets.resposta, usuario.nome from tickets, usuario where usuario.cod_usuario = tickets.cod_user";
             PreparedStatement ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery(sql);
             
             while(rs.next()){
                 tt = new Tickets();
                 
-                tt.setAssunto(rs.getString("assunto"));
-                tt.setTipopergunta(rs.getString("tipopergunta"));
-                tt.setMensagem(rs.getString("mensagem"));
-                tt.setResposta(rs.getString("resposta"));
+                tt.setAssunto(rs.getString("tickets.assunto"));
+                tt.setCod_ticket(rs.getInt("tickets.cod_ticket"));
+                tt.setTipopergunta(rs.getString("tickets.tipopergunta"));
+                tt.setMensagem(rs.getString("tickets.mensagem"));
+                tt.setResposta(rs.getString("tickets.resposta"));
+                tt.setNomeUser(rs.getString("usuario.nome"));
                 
                 lista.add(tt);
                 
