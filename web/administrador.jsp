@@ -39,6 +39,8 @@
                         out.println("<p class='assunto'> <b>Resposta:</b> " + t.getResposta() + "");
                         out.println("</p>");
                         out.println("</br>");
+                        out.println("<p class='assunto'> <b>Código do Ticket</b> " + t.getCod_ticket()+ "");
+                        out.println("</p>");
                         out.println("</div>");
 
                         ind++;

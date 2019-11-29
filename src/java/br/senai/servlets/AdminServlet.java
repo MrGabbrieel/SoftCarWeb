@@ -27,7 +27,10 @@ public class AdminServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
+       String envio = request.getParameter("ENVIAR");
+        switch(envio){
+            case "ENVIAR": this.admList(request, response);
+        }
     }
 
 
