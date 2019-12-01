@@ -10,10 +10,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="css/home.css"/>
-            <link rel="stylesheet" href="css/colorsLightMode.css"/>
-            <link rel = "shortcut icon" type = "imagem/x-icon" href = "images/LogoSoft.png"/>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700|Roboto+Slab:400,700&display=swap"/>            
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/542c00a3b0.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/colorsLightMode.css"/>
+        <link rel = "shortcut icon" type = "imagem/x-icon" href = "images/LogoSoft.png"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700|Roboto+Slab:400,700&display=swap"/>            
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <style>
     .espaço-cadastro{
@@ -180,6 +181,13 @@
             margin-top: 87px;
             padding-left: 550px; 
         }
+        .exit a{
+            color: #a3a3a3
+        }
+        .exit a:hover{
+            color: #145899;
+            transition: .4s;
+        }
         /* ########################################################### TELA PEQUENA ################################################################# */
         @media(max-width: 800px){
 
@@ -287,9 +295,9 @@
                   
                 </ul>
 
-               <ul class="espaço-cadastro">
-                      <li class=""><a class="aNav" id="" >Bem-Vindo, ${sessionScope.usuario.nomeUser} </a>
-                      <li class=""><a href="LoginServlet?Deslogar=Sair" class="aNav" id="" >  <b>|  Sair  |</b>  </a>       
+              <ul class="espaço-cadastro">
+                      <li class=""><a class="aNav" id="" >{sessionScope.usuario.nomeUser} </a></li>
+                      <li class="exit"><a href="LoginServlet?Deslogar=Sair" class="aNav" id="" title="Sair"><i class="fas fa-sign-out-alt"></i></a></li>
                 </ul>
                         
             </div>

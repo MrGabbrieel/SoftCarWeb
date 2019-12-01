@@ -13,61 +13,7 @@
     <script src="https://kit.fontawesome.com/542c00a3b0.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700|Roboto+Slab:400,700&display=swap"/>
-    <script>
-        
-       function editar(Campo){
-              var h2, input, text;
-              
-              if(Campo == 'nome'){
-                  h2 = document.getElementById('nomeUser');
-              }else if(Campo == 'cpf'){
-                  h2 = document.getElementById('cpf');
-              }else if(Campo == 'email'){
-                  h2 = document.getElementById('email');
-              }else if(Campo == 'cargo'){
-                  h2 = document.getElementById('cargo');
-              }else if(Campo == 'idade'){
-                  h2 = document.getElementById('idade');
-              }else if(Campo == 'telefone'){
-                  h2 = document.getElementById('telefone');
-              }
-              
-              text = h2.innerHTML;
-              
-              h2.style.display = 'none';
-              
-              input = document.createElement('input');
-              input.type = 'text';
-              input.value = text;
-              input.id = 'input';
-              input.size = Math.max(text.length / 4 * 3, 4);
-              h2.parentNode.insertBefore(input, h2);
-              
-              var enter = document.getElementById('input');
-                enter.onkeyup = function(e){
-                    if(e.keyCode == 13){
-                        // Removendo o input
-                        h2.parentNode.removeChild(input);
-
-                        // Update no texto
-                        h2.innerHTML = input.value;
-                        
-                        // Mostrando o texto dnv
-                        h2.style.display = "";
-                    }   
-                }
-                input.onblur = function() {
-                  // Removendo o input
-                  h2.parentNode.removeChild(input);
-
-                  // Update no texto
-                  h2.innerHTML = input.value;
-
-                  // Mostrando o texto dnv
-                  h2.style.display = "";
-                };
-            }
-        </script>
+    
     </head>
     <style>
 *{
@@ -80,15 +26,17 @@ body{
     background-size: cover;
 }
  #input{
-                height: 30px;
-                padding: 0 8px;
-                border: 1px solid #ddd;
-                border-color: #069;
-                border-radius: 12px;
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                outline: 0;
-                margin-top: 10px;
-                padding-inline-start: 10px;   
+    height: 50px;
+    padding: 0 8px;
+    border: 2px solid #cccccc;
+    border-radius: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15pt;
+    outline: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-inline-start: 10px;   
+    width: 100%;
             }
 .account-form{
     width: 81%;
@@ -99,6 +47,8 @@ body{
     position: relative;
     left: 10%;
     margin-top: 5%;
+    box-shadow: 0px 0px 10px #0d1d64;
+    margin-bottom: 50px;
 }
 .sessao1{
     align-items: center;
@@ -145,6 +95,7 @@ i{
     border-radius: 50%;
     margin-top: -70px;
     margin-left: 400px;
+    box-shadow: 0px 0px 5px #555555;
 }
 .sessao1 input{
      display: none;
@@ -166,6 +117,7 @@ label{
     position: relative;
     right: 63px;
     top: 40px;
+    box-shadow: 0px 0px 5px #555555;
 }
 .btn-voltar{
   color: #145899;
@@ -182,9 +134,14 @@ label{
   position: absolute;
   font-size: 15pt;
 }
+.btn-voltar a{
+    text-decoration: none;
+}
 .del-save{
     margin-top: 70px;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
 }
 .del-save button{
     font-family: 'Roboto Slab',sans-serif;
@@ -194,16 +151,19 @@ label{
     border: #145899 2px solid;
     color: #145899;
     background: none;
+    margin: 7px;
 }    
 #bt_delete:hover{
-    border: red 3px solid;
-    color: red;
-    font-weight: bold;
+    border: red 2px solid;
+    color: #ffffff;
+    background-color: red;
+    transition: 0.4s;
 }
 #bt_save:hover{
-    border: #0fb81d 3px solid;
-    color: #0fb81d;
-    font-weight: bold;
+    border: #0fb81d 2px solid;
+    color: #ffffff;
+    background-color: #0fb81d;
+    transition: 0.4s;
 }
 </style>
     <body>
@@ -245,7 +205,7 @@ label{
         </div>                               <!--//SESSÃO 2-->
         
         <div class="del-save">
-            <button id="bt_delete">DELETAR PERFIL</button>   <input type="submit" name="SALVA" value="SALVAR" id="bt_save">
+            <button id="bt_delete">DELETAR PERFIL</button>   <button type="submit" id="bt_save">SALVAR</button>
             </div>
 
     </form>
@@ -271,4 +231,59 @@ label{
         readURL(this);
     });
     </script>
+    <script>
+        
+        function editar(Campo){
+               var h2, input, text;
+               
+               if(Campo == 'nome'){
+                   h2 = document.getElementById('nomeUser');
+               }else if(Campo == 'cpf'){
+                   h2 = document.getElementById('cpf');
+               }else if(Campo == 'email'){
+                   h2 = document.getElementById('email');
+               }else if(Campo == 'cargo'){
+                   h2 = document.getElementById('cargo');
+               }else if(Campo == 'idade'){
+                   h2 = document.getElementById('idade');
+               }else if(Campo == 'telefone'){
+                   h2 = document.getElementById('telefone');
+               }
+               
+               text = h2.innerHTML;
+               
+               h2.style.display = 'none';
+               
+               input = document.createElement('input');
+               input.type = 'text';
+               input.value = text;
+               input.id = 'input';
+               input.size = Math.max(text.length / 4 * 3, 4);
+               h2.parentNode.insertBefore(input, h2);
+               
+               var enter = document.getElementById('input');
+                 enter.onkeyup = function(e){
+                     if(e.keyCode == 13){
+                         // Removendo o input
+                         h2.parentNode.removeChild(input);
+ 
+                         // Update no texto
+                         h2.innerHTML = input.value;
+                         
+                         // Mostrando o texto dnv
+                         h2.style.display = "";
+                     }   
+                 }
+                 input.onblur = function() {
+                   // Removendo o input
+                   h2.parentNode.removeChild(input);
+ 
+                   // Update no texto
+                   h2.innerHTML = input.value;
+ 
+                   // Mostrando o texto dnv
+                   h2.style.display = "";
+                 };
+             }
+         </script>
 </html>

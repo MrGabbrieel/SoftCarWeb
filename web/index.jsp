@@ -289,7 +289,7 @@
 
         <div class="banner-redirect"><a href="#"><img src="images/clica-aqui.png"></a></div>
 
-            <iframe width="560" height="315" src="https://mdbootstrap.com/api/snippets/embed/1500607/fullscreen" frameborder="0"></iframe>
+             <iframe width="100%" height="400" src="https://mdbootstrap.com/api/snippets/embed/1500607/fullscreen" frameborder="0"></iframe>
 <!--        <div class="tabelas">
             <table class="tabela1">
                 <tr class="titulo">
