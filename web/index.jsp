@@ -289,7 +289,8 @@
 
         <div class="banner-redirect"><a href="#"><img src="images/clica-aqui.png"></a></div>
 
-        <div class="tabelas">
+            <iframe width="560" height="315" src="https://mdbootstrap.com/api/snippets/embed/1500607/fullscreen" frameborder="0"></iframe>
+<!--        <div class="tabelas">
             <table class="tabela1">
                 <tr class="titulo">
                     <th>Como surgiu?</th>
@@ -317,7 +318,7 @@
                     <td>Solucionamos os problemas de todos os SoftPlayers para que todos possam ter uma melhor locomoção indo e vindo do trabalho.</td>
                 </tr>    
             </table>
-        </div>
+        </div>-->
 
         <footer>
            <!-- <iframe width="100%" height="269px" src="https://mdbootstrap.com/api/snippets/embed/1279184/fullscreen" frameborder="0"></iframe>-->
