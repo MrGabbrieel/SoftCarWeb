@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>Resultado de Inserção</title>
+        <title>Resultado de Resposta</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="css/colorsLightMode.css"/>
         <link rel = "shortcut icon" type = "imagem/x-icon" href = "images/LogoSoft.png"/>
@@ -49,12 +49,12 @@
   
 
         <div class="conform">
-        <h1>Ticket Enviado!</h1>
+        <h1>Resposta Enviada!</h1>
         <div>
-            A sua resposta foi enviada com sucesso ao Usuário!</b>
+            O seu Ticket do assunto: <b>${requestScope.tickets}</b> foi enviado com sucesso aos nossos Administradores!</b>
 
         </div>
-            <div> <a href="TicketsSevlet?ENVIAR=ENVIAR">Voltar ao suporte</a> </div>
+            <div> <a href="AdminServlet?ENVIAR=ENVIAR">Voltar ao suporte</a> </div>
         </div>  
     </body>
 </html>

@@ -78,7 +78,7 @@ public class AdminServlet extends HttpServlet {
                 a.responderTicket(admin);
                 
                 session.setAttribute("resposta", resposta);
-                request.getRequestDispatcher("/administrador.jsp").forward(request, response);
+                request.getRequestDispatcher("/resultInsercaoADM.jsp").forward(request, response);
                 
             }   
         }

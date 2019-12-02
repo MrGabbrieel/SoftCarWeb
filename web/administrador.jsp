@@ -141,7 +141,7 @@
                     <label>Código do Ticket:</label><br/>
                     <input type="number" name="codticket"/><br/>
 
-                    <button type="submit" name="ENVIAR" value="RESPONDER">Responder</button>
+                    <button  type="submit" name="ENVIAR" value="RESPONDER">Responder</button>
                 </form>
                 </div>
             </div> 

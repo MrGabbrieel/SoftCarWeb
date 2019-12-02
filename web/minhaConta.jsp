@@ -12,8 +12,50 @@
          <title>Softcar Minha Conta</title>
     <script src="https://kit.fontawesome.com/542c00a3b0.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700|Roboto+Slab:400,700&display=swap"/>
+    <script>
+        var nomeUser, cpf, desde, email, cargo, idade, telefone, formData;
+
+function comecar(){
+    mandaDados();
+}
+
+function mandaDados(){
+    nomeUser =$('#nomeUser').text();
+    cpf =$('#cpf').text();
+    email =$('#email').text();
+    cargo = $('#cargo').text();
+    idade = $('#idade').text();
+    telefone = $('#telefone').text();
     
+   
+    
+    formData = new FormData();
+ 
+    formData.append("nomeUser", nomeUser);
+    formData.append("cpf", cpf);
+    formData.append("email", email);
+    formData.append("cargo", cargo);
+    formData.append("idade", idade);
+    formData.append("telefone", telefone);
+    $.ajax({
+          url:'PerfilSevlet?Salvar=Enviar',
+          type: 'POST',
+          data: formData,
+          cache:false,
+          processData: false,
+          contentType: false,
+          enctype: 'multipart/form-data',
+          success: function(){
+              alert("Perfil Atualizado!");
+          },
+          error: function(){
+              alert("Não foi possivel Atualizar o seu Perfil!");
+          }
+       });
+}
+    </script>
     </head>
     <style>
 *{
@@ -205,7 +247,7 @@ label{
         </div>                               <!--//SESSÃO 2-->
         
         <div class="del-save">
-            <button id="bt_delete">DELETAR PERFIL</button>   <button type="submit" id="bt_save">SALVAR</button>
+            <button id="bt_delete">DELETAR PERFIL</button>   <button type="submit" onclick="comecar()" name="Salvar" value="Enviar" id="bt_save">SALVAR</button>
             </div>
       </div>
   

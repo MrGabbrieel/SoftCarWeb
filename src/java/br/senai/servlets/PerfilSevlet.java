@@ -31,7 +31,10 @@ public class PerfilSevlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-     
+      String envio = request.getParameter("Salvar");
+        switch(envio){
+            case "Enviar": this.atualizaDados(request, response);
+        }
         
     }
     
@@ -41,7 +44,7 @@ public class PerfilSevlet extends HttpServlet {
               // Session
                 HttpSession session = request.getSession();
               //
-              //pegando dados do request 
+              //pegar os dados
               
             String email = request.getParameter("email");
             String nomeUser = request.getParameter("nomeUser");
@@ -55,7 +58,7 @@ public class PerfilSevlet extends HttpServlet {
                 
                 
               //
-              // da up no banco
+              // att o banco
                   Usuario newUser = new Usuario(senha, nomeUser, email, cpf, idade, telefone, cargo);
                 
                 PerfilDAO pfDao = new PerfilDAO();
@@ -63,8 +66,8 @@ public class PerfilSevlet extends HttpServlet {
                 
                 LoginDAO l = new LoginDAO();
                 
-                Usuario novao = new Usuario();
-                novao = l.logar(newUser);
+                Usuario novo = new Usuario();
+                novo = l.logar(newUser);
                 
                 Usuario attSession;
                 attSession = (Usuario) session.getAttribute("usuario");
