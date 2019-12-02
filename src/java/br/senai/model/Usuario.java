@@ -58,7 +58,19 @@ public class Usuario {
         this.cargo = cargo;
       
     }
-     public Usuario(String senha, String nomeUser, String email, String cpf, String idade, String telefone, String cargo) {
+     public Usuario(int cod_usuario, String senha, String nomeUser, String email, String cpf, String idade, String telefone, String cargo, boolean logado) {
+        this.cod_usuario = cod_usuario;
+         this.cpf = cpf;
+        this.email = email;
+        this.senha = senha;
+        this.nomeUser = nomeUser;
+        this.idade = idade;
+        this.telefone = telefone;
+        this.cargo = cargo;
+        this.logado = logado;
+      
+    }
+       public Usuario(String senha, String nomeUser, String email, String cpf, String idade, String telefone, String cargo) {
         this.cpf = cpf;
         this.email = email;
         this.senha = senha;
@@ -66,9 +78,13 @@ public class Usuario {
         this.idade = idade;
         this.telefone = telefone;
         this.cargo = cargo;
+       
       
     }
 
+   
+
+    
     
     public int getCod_usuario() {
         return cod_usuario;

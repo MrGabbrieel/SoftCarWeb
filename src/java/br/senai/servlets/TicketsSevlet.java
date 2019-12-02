@@ -7,6 +7,7 @@ package br.senai.servlets;
 
 import br.senai.dao.TicketsDAO;
 import br.senai.model.Tickets;
+import br.senai.model.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -49,7 +50,10 @@ public class TicketsSevlet extends HttpServlet {
             String tipopergunta = request.getParameter("tipopergunta");
             String assunto = request.getParameter("assunto");
             String mensagem = request.getParameter("mensagem");
-            int cod_user = (int) session.getAttribute("cod_user");
+              Usuario u = new Usuario();
+              u = (Usuario) session.getAttribute("usuario");
+              
+            
             String msgpadrao = "Aguardndo Resposta";
             // end pegando
            
@@ -74,7 +78,7 @@ public class TicketsSevlet extends HttpServlet {
             //
       
                 // obj das suas devidas classes para mandar ao banco 
-                Tickets ticket = new Tickets(tipopergunta, assunto, mensagem, cod_user, msgpadrao);
+                Tickets ticket = new Tickets(tipopergunta, assunto, mensagem, u.getCod_usuario(), msgpadrao);
                 TicketsDAO c = new TicketsDAO();
                 c.inserirTickets(ticket);
                 
@@ -98,7 +102,9 @@ public class TicketsSevlet extends HttpServlet {
               HttpSession session = request.getSession();
               //
               // cod do user logado
-              int cod_user = (int) session.getAttribute("cod_user");
+              Usuario u = new Usuario();
+              u = (Usuario) session.getAttribute("usuario");
+              
               //
               
               // dar select nos tickets
@@ -106,7 +112,7 @@ public class TicketsSevlet extends HttpServlet {
                 // lista os tickets 
                 List<Tickets> ttList = new ArrayList();
                 //
-                ttList = ttDAO.getTickets(cod_user);
+                ttList = ttDAO.getTickets(u.getCod_usuario());
                 request.setAttribute("listaTickets", ttList);
                 request.getRequestDispatcher("suporte.jsp").forward(request, response);
               //    

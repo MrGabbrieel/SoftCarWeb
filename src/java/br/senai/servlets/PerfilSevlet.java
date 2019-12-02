@@ -32,11 +32,6 @@ public class PerfilSevlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
      
-            String envio = request.getParameter("SALVA");
-       switch(envio){
-           case "SALVAR": this.atualizaDados(request, response);
-           
-       }
         
     }
     

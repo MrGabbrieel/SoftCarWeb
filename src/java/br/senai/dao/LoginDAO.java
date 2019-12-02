@@ -16,7 +16,7 @@ public class LoginDAO {
          con = ConnectionFactory.getConexao();
         
     }
-    
+    //Pega tudo para por na session e logar
     public  Usuario logar(Usuario user) throws SQLException{
     
         String sql = "select * from usuario where email = '"+user.getEmail()+"' and senha = '"+user.getSenha()+"'";
@@ -29,10 +29,30 @@ public class LoginDAO {
  
         //
         Usuario usuario = null;
-        if(rs.next()){
-        usuario = new Usuario(rs.getInt("cod_usuario"), rs.getString("nome"), true);
         
+        String senha = null;
+        int cod_usuario = 0;
+        String nomeUser = null;
+        String email = null;
+        String cpf = null;
+        String idade = null;
+        String telefone = null;
+        String cargo = null;
+        
+        while (rs.next()) {
+
+            cod_usuario = rs.getInt("cod_usuario");
+            senha = rs.getString("senha");
+            nomeUser = rs.getString("nome");
+            email = rs.getString("email");
+            cpf = rs.getString("cpf");
+            idade = rs.getString("idade");
+            telefone = rs.getString("telefone");
+            cargo = rs.getString("cargo");
+
         }
+
+        usuario = new Usuario(cod_usuario ,senha, nomeUser, email, cpf, idade, telefone, cargo, true);
               
        
         

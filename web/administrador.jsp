@@ -27,7 +27,7 @@
     .dale1{
         margin: -10px 30px 30px 30px;
         padding: 50px 20px 0px 20px;
-        width: 300px;
+        width: auto;
         height: auto;
         background: rgb(9,9,121);
         background: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(20,88,153,1) 100%);
@@ -86,6 +86,13 @@
         width: 90%;
         font-family: 'Roboto', sans-serif;
     }
+    .escrolar{
+            display: flex;
+            height: auto;
+           
+            overflow-x: scroll;
+
+        }
     </style>
     <body>
            <%!List<Tickets> lista = new ArrayList();%>
@@ -97,32 +104,33 @@
         }
     %>
     
-    <%
-                    out.println("<div class='area'>");
+    <%             out.println("<div class='escrolar'>");
+                   
                     for (Tickets t : lista) {
 
                         out.println("<div class='dale1'>");
-                        out.println("<p class='nTicket'> " +t.getCod_ticket()+ " <b>Código do Ticket</b>");
+                        out.println("<p class='nTicket'> <b>Código do Ticket</b>" + t.getCod_ticket()+ "" );
                         out.println("</p>");
-                        out.println("<p class='tp'> <b>Tipo pergunta:</b> " + t.getTipopergunta() + "");
+                        out.println("<p class='tp'> <b>Tipo pergunta: </b> " + t.getTipopergunta() + "");
                         out.println("</p>");
-                        out.println("<p class='assunto'> <b>Assunto:</b> " + t.getAssunto() + "");
+                        out.println("<p class='assunto'> <b>Assunto: </b> " + t.getAssunto() + "");
                         out.println("</p>");
           
-                        out.println("<p class='assunto'> <b>Mensagem:</b> " + t.getMensagem() + "");
+                        out.println("<p class='assunto'> <b>Mensagem: </b> " + t.getMensagem() + "");
                         out.println("</p>");
          
-                        out.println("<p class='assunto'> <b>Resposta:</b> " + t.getResposta() + "");
+                        out.println("<p class='assunto'> <b>Resposta: </b> " + t.getResposta() + "");
                         out.println("</p>");
                
-                        out.println("<p class='assunto'> <b>Usuário:</b> " + t.getNomeUser()+ "");
+                        out.println("<p class='assunto'> <b>Usuário: </b> " + t.getNomeUser()+ "");
                         out.println("</p>");
                         out.println("</br>");
                         out.println("</div>");
 
                         ind++;
                     }
-                    
+                     out.println("</div>");
+                    out.println("</div>");
                     %>
             <div class="alinhamento-sessao">
                 <div class="sessaoAdm">

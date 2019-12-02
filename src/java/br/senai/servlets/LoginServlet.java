@@ -69,8 +69,7 @@ public class LoginServlet extends HttpServlet {
                 if (u.isLogado()) {
                     // Mandar usuario para session 
                     session.setAttribute("usuario", u);
-                      session.setAttribute("cpf", u.getCpf());
-                    session.setAttribute("cod_user", u.getCod_usuario());
+                  
                     
                     
                     

@@ -90,7 +90,7 @@ public class AdminServlet extends HttpServlet {
               HttpSession session = request.getSession();
               //
               // cod do user logado
-              int cod_user = (int) session.getAttribute("cod_user");
+             
               //
               
               // dar select nos tickets

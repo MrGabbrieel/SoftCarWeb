@@ -168,8 +168,8 @@ label{
 </style>
     <body>
       <div class="btn-voltar"><a href="index.jsp">&#8617;</a></div> <!--BOTÃO VOLTAR-->
-      <form class="account-form" action="PerfilSevlet" method="post">
-
+     
+      <div class="account-form">
         <div class="sessao1">                <!-- SESSÃO 1: Foto de Perfil-->
             <img id="blah" src="images/userlogo.jpg" />
             <input type='file' id="imgInp"/>
@@ -207,8 +207,9 @@ label{
         <div class="del-save">
             <button id="bt_delete">DELETAR PERFIL</button>   <button type="submit" id="bt_save">SALVAR</button>
             </div>
-
-    </form>
+      </div>
+  
+  
 
 </body>
 <script>
@@ -264,24 +265,22 @@ label{
                var enter = document.getElementById('input');
                  enter.onkeyup = function(e){
                      if(e.keyCode == 13){
-                         // Removendo o input
+                        
                          h2.parentNode.removeChild(input);
  
-                         // Update no texto
+                       
                          h2.innerHTML = input.value;
-                         
-                         // Mostrando o texto dnv
+                       
                          h2.style.display = "";
                      }   
                  }
                  input.onblur = function() {
-                   // Removendo o input
+               
                    h2.parentNode.removeChild(input);
  
-                   // Update no texto
                    h2.innerHTML = input.value;
  
-                   // Mostrando o texto dnv
+                  
                    h2.style.display = "";
                  };
              }
