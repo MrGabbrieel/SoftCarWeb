@@ -350,36 +350,42 @@
 
             <%  if (user != null && user.isLogado() && lista.isEmpty() == true) {
 
-                    out.println("Você não tem tickets");
 
-                } else if (user != null && user.isLogado() && lista != null && !lista.isEmpty()) {
-                    out.println("<div class='escrolar'>");
-                    for (Tickets t : lista) {
+                   out.println("Você não tem tickets");
 
-                        out.println("<div class='dale'>");
-                        out.println("<p class='nTicket'> " + ind + "º Ticket: ");
-                        out.println("</p>");
-                        out.println("<p class='tp'> <b>Tipo pergunta:</b> " + t.getTipopergunta() + "");
-                        out.println("</p>");
-                        out.println("<p class='assunto'> <b>Assunto:</b> " + t.getAssunto() + "");
-                        out.println("</p>");
-                        out.println("</br>");
-                        out.println("</div>");
+               }  else if (user != null && user.isLogado() && lista != null && !lista.isEmpty()){
+                   out.println("<div class='escrolar'>");
+                   for (Tickets t : lista) {
 
-                        ind++;
-                    }
-                    out.println("</div>");
-                } else {
+                       out.println("<div class='dale'>");
+                       out.println("<p class='nTicket'> " + ind + "º Ticket: ");
+                       out.println("</p>");
+                       out.println("<p class='tp'> <b>Tipo pergunta:</b> " + t.getTipopergunta() + "");
+                       out.println("</p>");
+                       out.println("<p class='assunto'> <b>Assunto:</b> " + t.getAssunto() + "");
+                       out.println("</p>");
+                       out.println("<p class='assunto'> <b>Resposta Admin:</b> " + t.getResposta()+ "");
+                       out.println("</p>");
+                       out.println("</br>");
+                       out.println("</div>");
 
-                    out.println("Você precisa estar logado!");
-                }%>
+                       ind++;
+                   }
+                   out.println("</div>");
+               } else {
+
+                   out.println("Você precisa estar logado!");
+               }
+ 
+           %>
 
         </div>
 
-        <div class="freqTickets">
-            <h3>Perguntas frequentes:</h3>
-            <img src="images/ticketFreq.png">
-        </div>
+           <div class="freqTickets">
+           <h3>Perguntas frequentes:</h3>
+           <img src="images/ticketFreq.png">
+       </div>
+
     </div>
 
 </html>

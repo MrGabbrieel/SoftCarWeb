@@ -193,11 +193,11 @@ label{
 
             <div class="divisoria"></div>
 
-            Idade: <h2 id="idade" type="text">24</h2>  <i type="button" value="idade" onclick="editar('idade')" class="fas fa-edit"></i>
+            Idade: <h2 id="idade" type="text">${sessionScope.usuario.idade}</h2>  <i type="button" value="idade" onclick="editar('idade')" class="fas fa-edit"></i>
 
             <div class="divisoria"></div>
 
-            Telefone: <h2 id="telefone" type="text">+55 (48) 99613-4973</h2>   <i type="button" value="telefone" onclick="editar('telefone')" class="fas fa-edit"></i>
+            Telefone: <h2 id="telefone" type="text">${sessionScope.usuario.telefone}</h2>   <i type="button" value="telefone" onclick="editar('telefone')" class="fas fa-edit"></i>
 
             <div class="divisoria"></div>
 
