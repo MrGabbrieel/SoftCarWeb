@@ -10,6 +10,7 @@ public class Tickets {
     private int cod_user;
     private String resposta;
     private String nomeUser;
+    private boolean respondido;
 
 
     public Tickets() {

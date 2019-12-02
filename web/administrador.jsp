@@ -96,8 +96,7 @@
     </style>
     <body>
            <%!List<Tickets> lista = new ArrayList();%>
-    <% int ind = 1; %>
-    <% lista = (List) request.getAttribute("listaTicketsADM");
+   <% lista = (List) request.getAttribute("listaTicketsADM");
         if (lista == null) {
             lista = new ArrayList();
 
@@ -125,9 +124,17 @@
                         out.println("<p class='assunto'> <b>Usuário: </b> " + t.getNomeUser()+ "");
                         out.println("</p>");
                         out.println("</br>");
-                        out.println("</div>");
+                        
 
-                        ind++;
+                        if(t.getResposta().equals("Aguardando Resposta") || t.getResposta() == null){
+                        out.println("</div>");
+                        } else{
+                        out.println("<p class='respondido'> <b>RESPONDIDO</b>");
+                        out.println("</p>");
+                        out.println("</div>");
+                        }
+                        
+                        
                     }
                      out.println("</div>");
                     out.println("</div>");
