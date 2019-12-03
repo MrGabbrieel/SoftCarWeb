@@ -364,12 +364,26 @@
                        out.println("</p>");
                        out.println("<p class='assunto'> <b>Assunto:</b> " + t.getAssunto() + "");
                        out.println("</p>");
+                   
+                       
+
+                       ind++;
+                       
+                       if (t.getResposta().equals("Aguardando Resposta") || t.getResposta() == null){
+                       
+                       out.println("<p class='aguarda'> AGUARDANDO RESPOSTA ");
+                       out.println("</p>");
+                       out.println("</br>");
+                       out.println("</div>");
+        
+                       }else{
                        out.println("<p class='assunto'> <b>Resposta Admin:</b> " + t.getResposta()+ "");
                        out.println("</p>");
                        out.println("</br>");
                        out.println("</div>");
-
-                       ind++;
+                       
+                       }
+                       
                    }
                    out.println("</div>");
                } else {

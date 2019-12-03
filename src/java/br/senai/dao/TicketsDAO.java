@@ -69,7 +69,7 @@ public class TicketsDAO {
     
     public List<Tickets> admList(){
              try {
-            String sql = "SELECT tickets.cod_ticket, tickets.tipopergunta, tickets.assunto, tickets.mensagem, tickets.resposta, usuario.nome from tickets, usuario where usuario.cod_usuario = tickets.cod_user";
+            String sql = "SELECT tickets.cod_ticket, tickets.tipopergunta, tickets.assunto, tickets.mensagem, tickets.resposta, usuario.nome from tickets, usuario where usuario.cod_usuario = tickets.cod_user ORDER BY tickets.cod_ticket DESC";
             PreparedStatement ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery(sql);
             
