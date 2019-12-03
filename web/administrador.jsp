@@ -17,12 +17,24 @@
         font-family: 'Roboto',sans-serif;
         color: white;
     }
+    ::-webkit-scrollbar{
+        width: 12px;
+    }
+    ::-webkit-scrollbar-track{
+        background-color: #222222;
+        border-radius: 3px
+    }
+    ::-webkit-scrollbar-thumb{
+        background: #145899;
+        border-radius: 3px;
+    }
     b{
         font-family: 'Roboto Slab', sans-serif;
     }
     p{
         display: flex;
         justify-content: space-between;
+        
     }
     .dale1{
         margin: -10px 30px 30px 30px;
@@ -33,6 +45,7 @@
         background: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(20,88,153,1) 100%);
         border-radius: 0px 0px 30px 30px;
         box-shadow: 0px 0px 10px #0d1d64;
+        
     }
     .sessaoAdm{
         width: 500px;
@@ -89,11 +102,11 @@
     .escrolar{
             display: flex;
             height: auto;
-           
             overflow-x: scroll;
 
         }
     </style>
+
     <body>
            <%!List<Tickets> lista = new ArrayList();%>
    <% lista = (List) request.getAttribute("listaTicketsADM");
@@ -131,6 +144,8 @@
                         } else{
                         out.println("<p class='respondido'> <b>RESPONDIDO</b>");
                         out.println("</p>");
+                        out.println("</br>");
+                        out.println("<button type='submit' onclick='removediv()' />");
                         out.println("</div>");
                         }
                         
